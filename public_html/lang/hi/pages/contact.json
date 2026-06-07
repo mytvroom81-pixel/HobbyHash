@@ -1,0 +1,21 @@
+{
+    "email.ticket_created_html": "<p>आपका HOBC सपोर्ट टिकट बना दिया गया है। हम जल्द से जल्द जवाब देंगे। </p>",
+    "email.ticket_created_text": "आपका HOBC सपोर्ट टिकट बना दिया गया है। हम जल्द से जल्द जवाब देंगे।",
+    "error.please_enter_a_valid_email_address": "कृपया एक मान्य ईमेल पता प्रविष्ट करें।",
+    "error.please_fill_out_all_fields": "कृपया सभी खानों को भरें।",
+    "error.ticket_could_not_be_created": "टिकट नहीं बनाया जा सका।",
+    "form.email_label": "ईमेल",
+    "form.message_label": "संदेश",
+    "form.name_label": "नाम",
+    "form.section_label": "आपको किस तरह की मदद की ज़रूरत है?",
+    "form.subject_label": "विषय",
+    "form.submit": "टिकट बनाएं",
+    "form.title": "सहायता",
+    "hero.eyebrow": "HOBC समर्थन",
+    "hero.lead": "चयनित HOBC वेबसाइट अनुभाग के लिए एक सहायता टिकट खोलें।",
+    "hero.title": "सहायता",
+    "meta.description": "HOBC सपोर्ट टिकट खोलें।",
+    "meta.title": "समर्थन से संपर्क करें",
+    "success.created": "टिकट बन गया है। इसे यहां ट्रैक करें:",
+    "wallet_layout.title": "संपर्क"
+}

@@ -1,0 +1,20 @@
+{
+    "button.add_reply": "উত্তর যোগ করুন",
+    "error.closed": "এই টিকিটটি বন্ধ করা হয়েছে।",
+    "error.message_required": "বার্তা প্রয়োজন।",
+    "error.not_found": "টিকিটটি খুঁজে পাওয়া যায়নি।",
+    "label.reply": "উত্তর",
+    "label.status": "অবস্থা:",
+    "meta.description": "আপনার HOBPLH0000 সাপোর্ট টিকেটটি ট্র্যাক করুন।",
+    "meta.title": "টিকিট",
+    "sender.admin": "সমর্থন",
+    "sender.guest": "অতিথি",
+    "sender.system": "সিস্টেম",
+    "sender.user": "তুমি",
+    "status.closed": "বন্ধ",
+    "status.open": "খোলা",
+    "status.waiting_admin": "সহায়তার জন্য অপেক্ষা করছি",
+    "status.waiting_user": "তোমার জন্য অপেক্ষায় আছি",
+    "success.reply_added": "উত্তর যোগ করা হয়েছে।",
+    "title": "সাপোর্ট টিকেট"
+}

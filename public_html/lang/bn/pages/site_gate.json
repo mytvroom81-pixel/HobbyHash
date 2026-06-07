@@ -1,0 +1,21 @@
+{
+    "card.home_mining.body": "HOBPLH0001 তৈরি করা হয়েছে HOBPLH0000-এর উপর ভিত্তি করে, যা সহজ সেটআপ গাইড সহ বাড়িতে একক মাইনিংয়ের জন্য উপযুক্ত।",
+    "card.home_mining.title": "হোম সোলো মাইনিং",
+    "card.pools.body": "ASIC মাইনারদের জন্য প্রধান পুল এবং ছোট HOBPLH0000 মাইনারদের জন্য ন্যানো পুল। শুধুমাত্র সোলো পুল।",
+    "card.pools.title": "প্রধান এবং ন্যানো পুল",
+    "card.transparent.body": "পোর্টালটি অনেস্ট চেইন, পুল, রিজার্ভ, বার্ন, এক্সপ্লোরার এবং ওয়ালেট স্ট্যাটাস দেখাবে। কোনো ভুয়া ডেটা থাকবে না।",
+    "card.transparent.title": "স্বচ্ছ সূচনা",
+    "expected_launch": "প্রত্যাশিত লঞ্চ:",
+    "link.privacy": "গোপনীয়তা নীতি",
+    "link.terms": "শর্তাবলী",
+    "maintenance_window.end": "শেষ:",
+    "maintenance_window.not_set": "সেট করা হয়নি",
+    "maintenance_window.start": "শুরু:",
+    "maintenance_window.title": "রক্ষণাবেক্ষণ উইন্ডো",
+    "meta.description_maintenance": "রক্ষণাবেক্ষণের কাজ চলার কারণে HOBPLH0000 ওয়েবসাইটটি সাময়িকভাবে অনুপলব্ধ।",
+    "meta.description_prelaunch": "HobbyHash Coin কমান্ড সেন্টার প্রস্তুত করা হচ্ছে। শীঘ্রই আসছে: হোম, সোলো মাইনিং গাইড, প্রধান এবং ন্যানো সোলো পুল, এক্সপ্লোরার, স্ট্যাটস, ডাউনলোডস, লঞ্চ রিজার্ভ ট্রান্সপারেন্সি, বার্ন ট্র্যাকিং, ডক্স, এবং স্পষ্ট ঝুঁকি বিজ্ঞপ্তি সহ কাস্টোডিয়াল ওয়ালেট অ্যাক্সেস।",
+    "meta.title_maintenance": "HOBPLH0000 রক্ষণাবেক্ষণের অধীনে আছে।",
+    "meta.title_prelaunch": "HOBPLH0000 উৎক্ষেপণের জন্য প্রস্তুত হচ্ছে।",
+    "status.maintenance": "রক্ষণাবেক্ষণ মোড",
+    "status.pre_launch": "প্রি-লঞ্চ"
+}

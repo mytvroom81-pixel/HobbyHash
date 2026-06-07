@@ -1,0 +1,21 @@
+{
+    "email.ticket_created_html": "<p> 您的 HOBC 支持工单已创建。我们将尽快回复。</p>",
+    "email.ticket_created_text": "您的 HOBC 支持工单已创建。我们将尽快回复。",
+    "error.please_enter_a_valid_email_address": "请输入有效的电子邮件地址。",
+    "error.please_fill_out_all_fields": "请填写所有字段。",
+    "error.ticket_could_not_be_created": "无法创建工单。",
+    "form.email_label": "电子邮件",
+    "form.message_label": "信息",
+    "form.name_label": "姓名",
+    "form.section_label": "您需要什么帮助？",
+    "form.subject_label": "主题",
+    "form.submit": "创建工单",
+    "form.title": "支持",
+    "hero.eyebrow": "HOBC 支持",
+    "hero.lead": "为选定的 HOBC 网站部分开具支持工单。",
+    "hero.title": "支持",
+    "meta.description": "提交 HOBC 支持工单。",
+    "meta.title": "联系客服",
+    "success.created": "工单已创建。请在此处跟踪工单：",
+    "wallet_layout.title": "接触"
+}

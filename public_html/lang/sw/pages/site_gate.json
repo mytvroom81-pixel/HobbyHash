@@ -1,0 +1,21 @@
+{
+    "card.home_mining.body": "HOBC imejengwa kwa kuzingatia uchimbaji wa nyumbani wa SHA-256 kwa miongozo rahisi ya usanidi.",
+    "card.home_mining.title": "Uchimbaji wa madini nyumbani peke yako",
+    "card.pools.body": "Bwawa Kuu la Wachimbaji wa ASIC na Bwawa la Nano kwa wachimbaji wadogo wa SHA-256. Bwawa la pekee pekee.",
+    "card.pools.title": "Mabwawa Kuu na Nano",
+    "card.transparent.body": "Lango litaonyesha hali ya mnyororo, bwawa la kuogelea, hifadhi, kuchoma, utafutaji, na pochi kwa uaminifu. Hakuna data bandia.",
+    "card.transparent.title": "Uzinduzi wa uwazi",
+    "expected_launch": "Uzinduzi unaotarajiwa:",
+    "link.privacy": "Sera ya Faragha",
+    "link.terms": "Masharti",
+    "maintenance_window.end": "Mwisho:",
+    "maintenance_window.not_set": "Haijawekwa",
+    "maintenance_window.start": "Anza:",
+    "maintenance_window.title": "Dirisha la matengenezo",
+    "meta.description_maintenance": "Tovuti ya HOBC haipatikani kwa muda wakati matengenezo yanakamilika.",
+    "meta.description_prelaunch": "Kituo cha amri cha HobbyHash Coin kinatayarishwa. Inakuja hivi karibuni: miongozo ya uchimbaji wa kibinafsi nyumbani, mabwawa kuu na ya pekee ya nano, uchunguzi, takwimu, vipakuliwa, uwazi wa akiba ya uzinduzi, ufuatiliaji wa kuchoma, hati, na ufikiaji wa pochi ya uangalizi pamoja na arifa za hatari zilizo wazi.",
+    "meta.title_maintenance": "HOBC inafanyiwa matengenezo",
+    "meta.title_prelaunch": "HOBC inajiandaa kuzinduliwa",
+    "status.maintenance": "Hali ya matengenezo",
+    "status.pre_launch": "Kabla ya uzinduzi"
+}

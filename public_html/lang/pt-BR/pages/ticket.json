@@ -1,0 +1,20 @@
+{
+    "button.add_reply": "Adicionar resposta",
+    "error.closed": "Este chamado foi encerrado.",
+    "error.message_required": "É necessário enviar uma mensagem.",
+    "error.not_found": "Bilhete não encontrado.",
+    "label.reply": "Responder",
+    "label.status": "Status:",
+    "meta.description": "Acompanhe o andamento do seu chamado de suporte HOBC.",
+    "meta.title": "Bilhete",
+    "sender.admin": "Apoiar",
+    "sender.guest": "Convidado",
+    "sender.system": "Sistema",
+    "sender.user": "Você",
+    "status.closed": "Fechado",
+    "status.open": "Abrir",
+    "status.waiting_admin": "Aguardando suporte",
+    "status.waiting_user": "Estou te esperando.",
+    "success.reply_added": "Resposta adicionada.",
+    "title": "Ticket de suporte"
+}

@@ -1,0 +1,21 @@
+{
+    "card.home_mining.body": "HOBC 是围绕 SHA-256 家庭单人挖矿而构建的，并提供简单的设置指南。",
+    "card.home_mining.title": "独自在家挖矿",
+    "card.pools.body": "主矿池适用于ASIC矿机，Nano矿池适用于小型SHA-256矿机。仅限单人矿池。",
+    "card.pools.title": "主泳池和纳米泳池",
+    "card.transparent.body": "该门户网站将显示诚实链、资金池、储备金、销毁、浏览器和钱包状态。所有数据均为实物拍摄，绝无虚假信息。",
+    "card.transparent.title": "透明发布",
+    "expected_launch": "预计发布时间：",
+    "link.privacy": "隐私政策",
+    "link.terms": "条款",
+    "maintenance_window.end": "结尾：",
+    "maintenance_window.not_set": "未设置",
+    "maintenance_window.start": "开始：",
+    "maintenance_window.title": "维护窗口",
+    "meta.description_maintenance": "HOBC 网站正在进行维护，暂时无法访问。",
+    "meta.description_prelaunch": "HobbyHash Coin 指挥中心正在筹备中。即将推出：首页单人挖矿指南、主矿池和 Nano 单人矿池、矿池浏览器、统计数据、下载、启动储备透明度、销毁跟踪、文档以及带有清晰风险提示的托管钱包访问权限。",
+    "meta.title_maintenance": "HOBC 正在维护中",
+    "meta.title_prelaunch": "HOBC 即将发布",
+    "status.maintenance": "维护模式",
+    "status.pre_launch": "预发布"
+}

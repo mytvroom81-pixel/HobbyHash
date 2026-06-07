@@ -1,0 +1,21 @@
+{
+    "card.home_mining.body": "HOBC è costruito attorno a SHA-256 per il mining domestico in solitaria con semplici guide di configurazione.",
+    "card.home_mining.title": "Miniera domestica in solitaria",
+    "card.pools.body": "Pool principale per i miner ASIC e Nano Pool per i piccoli miner SHA-256. Solo pool individuali.",
+    "card.pools.title": "Pool principale e nano",
+    "card.transparent.body": "Il portale mostrerà lo stato reale di blockchain, pool, riserva, burning, explorer e wallet. Nessun dato falso.",
+    "card.transparent.title": "Lancio trasparente",
+    "expected_launch": "Lancio previsto:",
+    "link.privacy": "politica sulla riservatezza",
+    "link.terms": "Informazioni",
+    "maintenance_window.end": "FINE:",
+    "maintenance_window.not_set": "Non impostato",
+    "maintenance_window.start": "Inizio:",
+    "maintenance_window.title": "Finestra di manutenzione",
+    "meta.description_maintenance": "Il sito web HOBC è temporaneamente non disponibile per manutenzione.",
+    "meta.description_prelaunch": "Il centro di comando HobbyHash Coin è in fase di preparazione. Prossimamente: guide per il mining in solitaria, pool principali e nano per il mining in solitaria, explorer, statistiche, download, trasparenza delle riserve di lancio, tracciamento del burn, documentazione e accesso al wallet di custodia con chiare avvertenze sui rischi.",
+    "meta.title_maintenance": "HOBC è in manutenzione",
+    "meta.title_prelaunch": "HOBC si sta preparando al lancio",
+    "status.maintenance": "Modalità di manutenzione",
+    "status.pre_launch": "Pre-lancio"
+}

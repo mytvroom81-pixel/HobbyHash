@@ -1,0 +1,25 @@
+[Unit]
+Description=HobbyHash Coin Official Social Posting Bot
+Documentation=https://hobbyhashcoin.com
+After=network.target
+
+[Service]
+Type=simple
+User=hobbyhashcoin
+Group=hobbyhashcoin
+WorkingDirectory=/home/hobbyhashcoin/social-bot
+Environment=NODE_ENV=production
+EnvironmentFile=/home/hobbyhashcoin/social-bot/.env
+ExecStart=/usr/bin/node src/index.js
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=hobbyhash-social-bot
+
+# Hardening
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

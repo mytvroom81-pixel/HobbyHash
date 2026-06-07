@@ -1,0 +1,11 @@
+{
+    "heading.recent_blocks": "Recent blocks",
+    "heading.recent_transactions": "Recent transactions",
+    "hero.eyebrow": "Real data only",
+    "hero.lead": "Stats are populated from local API endpoints. Missing fields stay honest: syncing, offline, pending launch, or not available yet.",
+    "hero.title": "HOBC Stats",
+    "meta.description": "Real HOBC chain, pool, wallet, and explorer stats.",
+    "meta.title": "Stats",
+    "notice.loading_blocks": "Loading latest blocks...",
+    "notice.loading_transactions": "Loading latest transactions..."
+}

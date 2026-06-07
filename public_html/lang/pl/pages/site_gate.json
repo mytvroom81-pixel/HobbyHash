@@ -1,0 +1,21 @@
+{
+    "card.home_mining.body": "HOBC to narzędzie do samodzielnego kopania w domu, oparte na SHA-256, z prostymi przewodnikami konfiguracji.",
+    "card.home_mining.title": "Domowe solo górnictwo",
+    "card.pools.body": "Główny basen dla górników ASIC i Nano basen dla małych górników SHA-256. Tylko baseny solo.",
+    "card.pools.title": "Baseny Główny i Nano",
+    "card.transparent.body": "Portal pokaże uczciwy status łańcucha, puli, rezerw, zużycia, eksploratora i portfela. Żadnych fałszywych danych.",
+    "card.transparent.title": "Przejrzyste uruchomienie",
+    "expected_launch": "Oczekiwana data premiery:",
+    "link.privacy": "Polityka prywatności",
+    "link.terms": "Warunki",
+    "maintenance_window.end": "Koniec:",
+    "maintenance_window.not_set": "Nie ustawiono",
+    "maintenance_window.start": "Start:",
+    "maintenance_window.title": "Okno konserwacyjne",
+    "meta.description_maintenance": "Strona internetowa HOBC jest tymczasowo niedostępna z powodu prac konserwacyjnych.",
+    "meta.description_prelaunch": "Centrum dowodzenia HobbyHash Coin jest w przygotowaniu. Już wkrótce: domowe poradniki do kopania solo, pule solo główne i nano, eksplorator, statystyki, pobieranie, przejrzystość rezerw startowych, śledzenie zużycia, dokumenty i dostęp do portfela depozytowego z przejrzystymi powiadomieniami o ryzyku.",
+    "meta.title_maintenance": "HOBC jest w trakcie konserwacji",
+    "meta.title_prelaunch": "HOBC przygotowuje się do startu",
+    "status.maintenance": "Tryb konserwacji",
+    "status.pre_launch": "Przed premierą"
+}

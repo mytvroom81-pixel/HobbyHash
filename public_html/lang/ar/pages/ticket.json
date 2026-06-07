@@ -1,0 +1,20 @@
+{
+    "button.add_reply": "أضف ردًا",
+    "error.closed": "تم إغلاق هذه التذكرة.",
+    "error.message_required": "الرسالة مطلوبة.",
+    "error.not_found": "لم يتم العثور على التذكرة.",
+    "label.reply": "رد",
+    "label.status": "حالة:",
+    "meta.description": "تتبع تذكرة الدعم الخاصة بك HOBC.",
+    "meta.title": "تذكرة",
+    "sender.admin": "يدعم",
+    "sender.guest": "ضيف",
+    "sender.system": "نظام",
+    "sender.user": "أنت",
+    "status.closed": "مغلق",
+    "status.open": "يفتح",
+    "status.waiting_admin": "في انتظار الدعم",
+    "status.waiting_user": "في انتظاركم",
+    "success.reply_added": "تمت إضافة الرد.",
+    "title": "تذكرة دعم"
+}

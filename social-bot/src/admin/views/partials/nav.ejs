@@ -1,0 +1,18 @@
+  <header>
+    <h1>⛏ HobbyHash Update Bot</h1>
+    <nav>
+      <a href="/admin/">Dashboard</a>
+      <a href="/admin/platforms">Platforms</a>
+      <a href="/admin/templates">Templates</a>
+      <a href="/admin/preview">Preview</a>
+      <a href="/admin/queue">Queue</a>
+      <a href="/admin/history">History</a>
+      <a href="/admin/replies">Replies</a>
+      <a href="/admin/settings">Settings</a>
+      <a href="/admin/audit">Audit</a>
+      <form class="inline" method="POST" action="/admin/logout">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <button type="submit" class="btn btn-secondary">Logout</button>
+      </form>
+    </nav>
+  </header>

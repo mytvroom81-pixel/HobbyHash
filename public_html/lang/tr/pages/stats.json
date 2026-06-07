@@ -1,0 +1,11 @@
+{
+    "heading.recent_blocks": "Son bloklar",
+    "heading.recent_transactions": "Son işlemler",
+    "hero.eyebrow": "Yalnızca gerçek veriler",
+    "hero.lead": "İstatistikler yerel API uç noktalarından alınır. Eksik alanlar olduğu gibi bırakılır: senkronize ediliyor, çevrimdışı, lansman bekleniyor veya henüz mevcut değil.",
+    "hero.title": "HOBC İstatistikleri",
+    "meta.description": "HOBC zincirine, havuzuna, cüzdanına ve gezginine ait gerçek istatistikler.",
+    "meta.title": "İstatistikler",
+    "notice.loading_blocks": "En yeni bloklar yükleniyor...",
+    "notice.loading_transactions": "Son işlemler yükleniyor..."
+}

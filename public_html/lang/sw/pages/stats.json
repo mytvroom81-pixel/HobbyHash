@@ -1,0 +1,11 @@
+{
+    "heading.recent_blocks": "Vitalu vya hivi karibuni",
+    "heading.recent_transactions": "Miamala ya hivi karibuni",
+    "hero.eyebrow": "Data halisi pekee",
+    "hero.lead": "Takwimu hujazwa kutoka kwa sehemu za mwisho za API za ndani. Sehemu zinazokosekana zinabaki kuwa za kweli: kusawazisha, nje ya mtandao, uzinduzi unaosubiri, au haupatikani bado.",
+    "hero.title": "Takwimu za HOBC",
+    "meta.description": "Takwimu halisi za mnyororo wa HOBC, bwawa la kuogelea, pochi, na wachunguzi.",
+    "meta.title": "Takwimu",
+    "notice.loading_blocks": "Inapakia vitalu vipya zaidi...",
+    "notice.loading_transactions": "Inapakia miamala ya hivi punde..."
+}

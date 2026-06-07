@@ -1,0 +1,20 @@
+{
+    "button.add_reply": "Добавить ответ",
+    "error.closed": "Данная заявка закрыта.",
+    "error.message_required": "Сообщение обязательно для заполнения.",
+    "error.not_found": "Билет не найден.",
+    "label.reply": "Отвечать",
+    "label.status": "Статус:",
+    "meta.description": "Отслеживайте статус вашей заявки в службу поддержки HOBC.",
+    "meta.title": "Билет",
+    "sender.admin": "Поддерживать",
+    "sender.guest": "Гость",
+    "sender.system": "Система",
+    "sender.user": "Ты",
+    "status.closed": "Закрыто",
+    "status.open": "Открыть",
+    "status.waiting_admin": "Ожидание поддержки",
+    "status.waiting_user": "Ждем Вас",
+    "success.reply_added": "Ответ добавлен.",
+    "title": "Заявка в службу поддержки"
+}

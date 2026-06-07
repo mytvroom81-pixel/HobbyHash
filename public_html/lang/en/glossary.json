@@ -1,0 +1,51 @@
+{
+  "brands": [
+    "HobbyHash Coin",
+    "HobbyHash",
+    "HOBC",
+    "SoloBitMiners",
+    "ckpool",
+    "Bitaxe",
+    "NerdMiner",
+    "HobbyHash-Linux",
+    "HobbyHash-Wallets"
+  ],
+  "tickers": [
+    "HOBC",
+    "BTC",
+    "BCH",
+    "DGB",
+    "MBUX"
+  ],
+  "algorithms": [
+    "SHA256",
+    "SHA-256",
+    "SHA256d"
+  ],
+  "technical_terms": [
+    "RPC",
+    "P2P",
+    "Stratum",
+    "stratum+tcp",
+    "stratum+tcp://pool.hobbyhashcoin.com:5555",
+    "stratum+tcp://pool.hobbyhashcoin.com:5556",
+    "JSON-RPC",
+    "CLI",
+    "UTXO",
+    "txid",
+    "mainnet",
+    "testnet"
+  ],
+  "ports": [
+    "5555",
+    "5556",
+    "18761",
+    "18762",
+    "18765",
+    "28761",
+    "28762"
+  ],
+  "domains": [
+    "hobbyhashcoin.com"
+  ]
+}

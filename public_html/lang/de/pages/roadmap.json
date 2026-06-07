@@ -1,0 +1,15 @@
+{
+    "card.api.body": "Lokale RPC/pool/wallet Status-Endpunkte mit ehrlichen Nichtverfügbarkeitszuständen.",
+    "card.api.title": "Echte API-Endpunkte",
+    "card.explorer.body": "Start ausstehend. Vollständige Block-, txid- und Adresssuche erfordern echte indexierte Daten.",
+    "card.explorer.title": "Explorer-Indexierung",
+    "card.reserve.body": "Die Verfolgung von Burn-Adressen ist aktiv. Reserveguthaben und detailliertere Transaktionslisten müssen weiterhin aus der realen Kettenverfolgung stammen.",
+    "card.reserve.title": "Reserve- und Verbrauchsverfolgung",
+    "card.shell.body": "Erste einheitliche Kommandozentrale.",
+    "card.shell.title": "Website-Shell",
+    "hero.eyebrow": "Roadmap",
+    "hero.lead": "Roadmap-Elemente werden als Status angezeigt. Ausstehende Arbeiten werden nicht als abgeschlossen dargestellt.",
+    "hero.title": "Roadmap erstellen",
+    "meta.description": "Roadmap für HOBC und anstehende Portalarbeiten.",
+    "meta.title": "Roadmap"
+}

@@ -1,0 +1,21 @@
+{
+    "email.ticket_created_html": "<p>Yêu cầu hỗ trợ HOBC của bạn đã được tạo. Chúng tôi sẽ trả lời sớm nhất có thể.</p>",
+    "email.ticket_created_text": "Yêu cầu hỗ trợ HOBC của bạn đã được tạo. Chúng tôi sẽ trả lời sớm nhất có thể.",
+    "error.please_enter_a_valid_email_address": "Vui lòng nhập địa chỉ email hợp lệ.",
+    "error.please_fill_out_all_fields": "Vui lòng điền đầy đủ thông tin vào tất cả các trường.",
+    "error.ticket_could_not_be_created": "Không thể tạo vé.",
+    "form.email_label": "E-mail",
+    "form.message_label": "Tin nhắn",
+    "form.name_label": "Tên",
+    "form.section_label": "Bạn cần giúp đỡ về vấn đề gì?",
+    "form.subject_label": "Chủ thể",
+    "form.submit": "Tạo vé",
+    "form.title": "Ủng hộ",
+    "hero.eyebrow": "Hỗ trợ HOBC",
+    "hero.lead": "Mở yêu cầu hỗ trợ cho phần trang web HOBC đã chọn.",
+    "hero.title": "Ủng hộ",
+    "meta.description": "Mở yêu cầu hỗ trợ HOBC.",
+    "meta.title": "Liên hệ bộ phận hỗ trợ",
+    "success.created": "Vé đã được tạo. Theo dõi tại đây:",
+    "wallet_layout.title": "Liên hệ"
+}

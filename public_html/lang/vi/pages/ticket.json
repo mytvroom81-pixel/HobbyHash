@@ -1,0 +1,20 @@
+{
+    "button.add_reply": "Thêm phản hồi",
+    "error.closed": "Yêu cầu này đã được đóng.",
+    "error.message_required": "Thông báo là bắt buộc.",
+    "error.not_found": "Không tìm thấy vé.",
+    "label.reply": "Hồi đáp",
+    "label.status": "Trạng thái:",
+    "meta.description": "Theo dõi yêu cầu hỗ trợ HOBC của bạn.",
+    "meta.title": "Vé",
+    "sender.admin": "Ủng hộ",
+    "sender.guest": "Khách mời",
+    "sender.system": "Hệ thống",
+    "sender.user": "Bạn",
+    "status.closed": "Đóng cửa",
+    "status.open": "Mở",
+    "status.waiting_admin": "Đang chờ hỗ trợ",
+    "status.waiting_user": "Đang đợi bạn",
+    "success.reply_added": "Đã thêm câu trả lời.",
+    "title": "Phiếu hỗ trợ"
+}

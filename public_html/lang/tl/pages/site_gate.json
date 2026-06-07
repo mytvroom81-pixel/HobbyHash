@@ -1,0 +1,21 @@
+{
+    "card.home_mining.body": "Ang HOBC ay binuo batay sa SHA-256 home solo mining na may mga simpleng gabay sa pag-setup.",
+    "card.home_mining.title": "Pagmimina nang mag-isa sa bahay",
+    "card.pools.body": "Pangunahing Pool para sa mga minero ng ASIC at Nano Pool para sa maliliit na minero ng SHA-256. Para sa mga solo pool lamang.",
+    "card.pools.title": "Mga Pangunahing Pool at Nano Pool",
+    "card.transparent.body": "Ipapakita ng portal ang status ng honest chain, pool, reserve, burn, explorer, at wallet. Walang pekeng data.",
+    "card.transparent.title": "Transparent na paglulunsad",
+    "expected_launch": "Inaasahang paglulunsad:",
+    "link.privacy": "Patakaran sa Pagkapribado",
+    "link.terms": "Mga Tuntunin",
+    "maintenance_window.end": "Wakas:",
+    "maintenance_window.not_set": "Hindi nakatakda",
+    "maintenance_window.start": "Simulan:",
+    "maintenance_window.title": "Panandaan ng pagpapanatili",
+    "meta.description_maintenance": "Pansamantalang hindi magagamit ang website ng HOBC habang nakumpleto ang maintenance.",
+    "meta.description_prelaunch": "Inihahanda na ang command center ng HobbyHash Coin. Malapit na: mga gabay sa home solo mining, mga main at nano solo pool, explorer, stats, downloads, launch reserve transparency, burn tracking, mga dokumento, at access sa custodial wallet na may malinaw na mga abiso sa panganib.",
+    "meta.title_maintenance": "Ang HOBC ay nasa ilalim ng pagpapanatili",
+    "meta.title_prelaunch": "Naghahanda na ang HOBC para ilunsad",
+    "status.maintenance": "Paraan ng pagpapanatili",
+    "status.pre_launch": "Bago ang paglulunsad"
+}

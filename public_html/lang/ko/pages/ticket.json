@@ -1,0 +1,20 @@
+{
+    "button.add_reply": "답글 추가",
+    "error.closed": "이 티켓은 마감되었습니다.",
+    "error.message_required": "메시지는 필수 입력 사항입니다.",
+    "error.not_found": "티켓을 찾을 수 없습니다.",
+    "label.reply": "회신하다",
+    "label.status": "상태:",
+    "meta.description": "HOBC 지원 티켓의 진행 상황을 확인하세요.",
+    "meta.title": "표",
+    "sender.admin": "지원하다",
+    "sender.guest": "손님",
+    "sender.system": "체계",
+    "sender.user": "너",
+    "status.closed": "닫은",
+    "status.open": "열려 있는",
+    "status.waiting_admin": "지원을 기다리고 있습니다",
+    "status.waiting_user": "당신을 기다리고 있어요",
+    "success.reply_added": "답글이 추가되었습니다.",
+    "title": "지원 티켓"
+}

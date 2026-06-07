@@ -1,0 +1,15 @@
+{
+    "card.api.body": "Titik akhir status RPC/pool/dompet setempat dengan keadaan tidak tersedia yang jujur.",
+    "card.api.title": "Titik akhir API sebenar",
+    "card.explorer.body": "Pelancaran belum selesai. Blok penuh, txid dan carian alamat memerlukan data berindeks sebenar.",
+    "card.explorer.title": "Pengindeksan Explorer",
+    "card.reserve.body": "Penjejakan alamat pembakaran aktif. Baki rizab dan senarai tx yang lebih kaya mesti masih datang daripada penjejakan rantaian sebenar.",
+    "card.reserve.title": "Penjejakan rizab dan pembakaran",
+    "card.shell.body": "Cangkang pusat arahan bersatu awal.",
+    "card.shell.title": "Cangkang laman web",
+    "hero.eyebrow": "Peta Jalan",
+    "hero.lead": "Item peta jalan ditunjukkan sebagai status. Kerja yang belum selesai tidak dipaparkan sebagai selesai.",
+    "hero.title": "Peta Jalan Binaan",
+    "meta.description": "Pelan tindakan HOBC dan kerja portal yang sedang menunggu.",
+    "meta.title": "Peta Jalan"
+}

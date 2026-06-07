@@ -1,0 +1,21 @@
+{
+    "email.ticket_created_html": "<p>サポートチケットHOBCが作成されました。できるだけ早くご返信いたします。</p>",
+    "email.ticket_created_text": "お客様のサポートチケット（HOBC）が作成されました。できるだけ早くご返信いたします。",
+    "error.please_enter_a_valid_email_address": "有効なメールアドレスを入力してください。",
+    "error.please_fill_out_all_fields": "すべての項目にご記入ください。",
+    "error.ticket_could_not_be_created": "チケットを作成できませんでした。",
+    "form.email_label": "メール",
+    "form.message_label": "メッセージ",
+    "form.name_label": "名前",
+    "form.section_label": "どのようなことでお困りですか？",
+    "form.subject_label": "件名",
+    "form.submit": "チケットを作成する",
+    "form.title": "サポート",
+    "hero.eyebrow": "HOBC サポート",
+    "hero.lead": "選択したHOBCウェブサイトセクションに関するサポートチケットを開いてください。",
+    "hero.title": "サポート",
+    "meta.description": "HOBCのサポートチケットを開いてください。",
+    "meta.title": "サポートにお問い合わせください",
+    "success.created": "チケットが作成されました。こちらで追跡できます。",
+    "wallet_layout.title": "お問い合わせ"
+}

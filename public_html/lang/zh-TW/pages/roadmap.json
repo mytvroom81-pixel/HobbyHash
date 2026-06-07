@@ -1,0 +1,15 @@
+{
+    "card.api.body": "本機 RPC/pool/wallet 狀態端點具有誠實的不可用狀態。",
+    "card.api.title": "真實 API 端點",
+    "card.explorer.body": "待上線。完整區塊、txid 和地址搜尋需要真實的索引資料。",
+    "card.explorer.title": "瀏覽器索引",
+    "card.reserve.body": "銷毀地址追蹤功能已啟用。儲備餘額和更詳細的交易清單仍需來自真實的區塊鏈追蹤。",
+    "card.reserve.title": "儲備和燃燒跟踪",
+    "card.shell.body": "初始統一指揮中心外殼。",
+    "card.shell.title": "網站外殼",
+    "hero.eyebrow": "路線圖",
+    "hero.lead": "路線圖項目以狀態形式顯示。待辦事項不會顯示為已完成。",
+    "hero.title": "制定路線圖",
+    "meta.description": "HOBC路線圖和待完成的入口網站工作。",
+    "meta.title": "路線圖"
+}

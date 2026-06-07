@@ -1,0 +1,11 @@
+{
+    "heading.recent_blocks": "Blok terkini",
+    "heading.recent_transactions": "Transaksi terkini",
+    "hero.eyebrow": "Data sebenar sahaja",
+    "hero.lead": "Statistik diisi daripada titik akhir API setempat. Medan yang tiada kekal jujur: penyegerakan, luar talian, pelancaran belum selesai atau belum tersedia lagi.",
+    "hero.title": "Statistik HOBC",
+    "meta.description": "Statistik rantaian, kumpulan, dompet dan penjelajah HOBC sebenar.",
+    "meta.title": "Statistik",
+    "notice.loading_blocks": "Memuatkan blok terkini...",
+    "notice.loading_transactions": "Memuatkan transaksi terkini..."
+}

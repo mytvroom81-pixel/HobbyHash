@@ -1,0 +1,20 @@
+{
+    "button.add_reply": "Yanıt Ekle",
+    "error.closed": "Bu destek talebi kapatılmıştır.",
+    "error.message_required": "Mesaj gereklidir.",
+    "error.not_found": "Bilet bulunamadı.",
+    "label.reply": "Cevap vermek",
+    "label.status": "Durum:",
+    "meta.description": "HOBC destek talebinizi takip edin.",
+    "meta.title": "Bilet",
+    "sender.admin": "Destek",
+    "sender.guest": "Misafir",
+    "sender.system": "Sistem",
+    "sender.user": "Sen",
+    "status.closed": "Kapalı",
+    "status.open": "Açık",
+    "status.waiting_admin": "Destek bekliyorum",
+    "status.waiting_user": "Seni bekliyor",
+    "success.reply_added": "Yanıt eklendi.",
+    "title": "Destek Talebi"
+}

@@ -1,0 +1,11 @@
+{
+    "heading.recent_blocks": "Blokir terbaru",
+    "heading.recent_transactions": "Transaksi terbaru",
+    "hero.eyebrow": "Hanya data nyata",
+    "hero.lead": "Statistik diisi dari titik akhir API lokal. Kolom yang hilang tetap jujur: sinkronisasi, offline, menunggu peluncuran, atau belum tersedia.",
+    "hero.title": "Statistik HOBC",
+    "meta.description": "Statistik nyata dari rantai, pool, dompet, dan penjelajah HOBC.",
+    "meta.title": "Statistik",
+    "notice.loading_blocks": "Memuat blok terbaru...",
+    "notice.loading_transactions": "Memuat transaksi terbaru..."
+}

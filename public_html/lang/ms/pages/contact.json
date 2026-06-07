@@ -1,0 +1,21 @@
+{
+    "email.ticket_created_html": "<p>Tiket sokongan HOBC anda telah dibuat. Kami akan membalas secepat mungkin.</p>",
+    "email.ticket_created_text": "Tiket sokongan HOBC anda telah dibuat. Kami akan membalas secepat mungkin.",
+    "error.please_enter_a_valid_email_address": "Sila masukkan alamat e-mel yang sah.",
+    "error.please_fill_out_all_fields": "Sila isi semua ruangan.",
+    "error.ticket_could_not_be_created": "Tiket tidak dapat dibuat.",
+    "form.email_label": "E-mel",
+    "form.message_label": "Mesej",
+    "form.name_label": "Nama",
+    "form.section_label": "Apa yang anda perlukan bantuan?",
+    "form.subject_label": "Subjek",
+    "form.submit": "Cipta Tiket",
+    "form.title": "Sokongan",
+    "hero.eyebrow": "Sokongan HOBC",
+    "hero.lead": "Buka tiket sokongan untuk bahagian laman web HOBC yang dipilih.",
+    "hero.title": "Sokongan",
+    "meta.description": "Buka tiket sokongan HOBC.",
+    "meta.title": "Hubungi Sokongan",
+    "success.created": "Tiket telah dibuat. Jejaki di sini:",
+    "wallet_layout.title": "Hubungi"
+}

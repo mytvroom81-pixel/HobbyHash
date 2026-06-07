@@ -1,0 +1,15 @@
+{
+    "card.api.body": "Pontos de extremidade locais RPC/pool/wallet com estados indisponíveis honestos.",
+    "card.api.title": "Endpoints de API reais",
+    "card.explorer.body": "Lançamento pendente. O bloco completo, txid, e a busca por endereço exigem dados indexados reais.",
+    "card.explorer.title": "Indexação do Explorer",
+    "card.reserve.body": "O rastreamento de endereços de queima está ativo. Saldos de reserva e listas de transações mais abrangentes ainda precisam ser obtidos por meio do rastreamento da blockchain.",
+    "card.reserve.title": "Rastreamento de reservas e queimadas",
+    "card.shell.body": "Shell inicial do centro de comando unificado.",
+    "card.shell.title": "Estrutura do site",
+    "hero.eyebrow": "Roteiro",
+    "hero.lead": "Os itens do roteiro são exibidos como status. O trabalho pendente não é apresentado como concluído.",
+    "hero.title": "Roteiro de Construção",
+    "meta.description": "Roteiro HOBC e trabalho pendente no portal.",
+    "meta.title": "Roteiro"
+}

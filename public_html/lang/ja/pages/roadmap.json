@@ -1,0 +1,15 @@
+{
+    "card.api.body": "ローカルの RPC/pool/wallet ステータスエンドポイントで、正直な利用不可状態を表示します。",
+    "card.api.title": "実際のAPIエンドポイント",
+    "card.explorer.body": "リリース待ち。フルブロック、txid、およびアドレス検索には、実際のインデックス付きデータが必要です。",
+    "card.explorer.title": "エクスプローラーのインデックス作成",
+    "card.reserve.body": "バーンアドレスの追跡は有効です。準備残高やより詳細なトランザクションリストは、実際のチェーン追跡から取得する必要があります。",
+    "card.reserve.title": "予備資源と燃焼状況の追跡",
+    "card.shell.body": "初期統合コマンドセンターのシェル。",
+    "card.shell.title": "ウェブサイトシェル",
+    "hero.eyebrow": "ロードマップ",
+    "hero.lead": "ロードマップの項目はステータスとして表示されます。保留中の作業は完了済みとは表示されません。",
+    "hero.title": "ロードマップの構築",
+    "meta.description": "HOBCのロードマップと保留中のポータル作業。",
+    "meta.title": "ロードマップ"
+}

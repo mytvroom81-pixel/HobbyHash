@@ -1,0 +1,21 @@
+{
+    "email.ticket_created_html": "Votre ticket d'assistance HOBC a été créé. Nous vous répondrons dans les plus brefs délais.",
+    "email.ticket_created_text": "Votre ticket d'assistance HOBC a été créé. Nous vous répondrons dans les plus brefs délais.",
+    "error.please_enter_a_valid_email_address": "S'il vous plaît, mettez une adresse email valide.",
+    "error.please_fill_out_all_fields": "Veuillez remplir tous les champs.",
+    "error.ticket_could_not_be_created": "Impossible de créer le ticket.",
+    "form.email_label": "E-mail",
+    "form.message_label": "Message",
+    "form.name_label": "Nom",
+    "form.section_label": "De quoi avez-vous besoin ?",
+    "form.subject_label": "Sujet",
+    "form.submit": "Créer un ticket",
+    "form.title": "Soutien",
+    "hero.eyebrow": "Assistance HOBC",
+    "hero.lead": "Ouvrez un ticket d'assistance pour la section du site web HOBC sélectionnée.",
+    "hero.title": "Soutien",
+    "meta.description": "Ouvrez un ticket d'assistance HOBC.",
+    "meta.title": "Contacter l'assistance",
+    "success.created": "Ticket créé. Suivez son traitement ici :",
+    "wallet_layout.title": "Contact"
+}

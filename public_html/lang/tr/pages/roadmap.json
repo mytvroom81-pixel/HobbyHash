@@ -1,0 +1,15 @@
+{
+    "card.api.body": "RPC/havuz/cüzdan durum uç noktalarının dürüst, kullanılamaz durumları.",
+    "card.api.title": "Gerçek API uç noktaları",
+    "card.explorer.body": "Yakında kullanıma sunulacak. Tam blok, txid ve adres araması için gerçek indekslenmiş verilere ihtiyaç duyulmaktadır.",
+    "card.explorer.title": "Gezgin dizinleme",
+    "card.reserve.body": "Yakma adresi takibi aktiftir. Rezerv bakiyeleri ve daha zengin işlem listeleri hala gerçek zincir takibinden gelmelidir.",
+    "card.reserve.title": "Rezerv ve tüketim takibi",
+    "card.shell.body": "İlk birleşik komuta merkezi kabuğu.",
+    "card.shell.title": "Web sitesi şablonu",
+    "hero.eyebrow": "Yol Haritası",
+    "hero.lead": "Yol haritasındaki öğeler durumlar olarak gösterilir. Bekleyen işler tamamlanmış olarak sunulmaz.",
+    "hero.title": "Yol Haritası Oluşturma",
+    "meta.description": "HOBC yol haritası ve bekleyen portal çalışmaları.",
+    "meta.title": "Yol Haritası"
+}

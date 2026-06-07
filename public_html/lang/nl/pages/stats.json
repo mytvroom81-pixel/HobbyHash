@@ -1,0 +1,11 @@
+{
+    "heading.recent_blocks": "Recente blokken",
+    "heading.recent_transactions": "Recente transacties",
+    "hero.eyebrow": "Echte gegevens alleen",
+    "hero.lead": "De statistieken worden ingevuld via lokale API-eindpunten. Ontbrekende velden blijven correct weergegeven: synchroniseren, offline, lancering in afwachting of nog niet beschikbaar.",
+    "hero.title": "HOBC Statistieken",
+    "meta.description": "Echte statistieken van de HOBC-blockchain, -pool, -wallet en -explorer.",
+    "meta.title": "Statistieken",
+    "notice.loading_blocks": "De nieuwste blokken worden geladen...",
+    "notice.loading_transactions": "De meest recente transacties worden geladen..."
+}

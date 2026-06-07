@@ -1,0 +1,15 @@
+{
+    "card.api.body": "Mga lokal na endpoint ng katayuan ng RPC/pool/wallet na may mga tapat na hindi magagamit na estado.",
+    "card.api.title": "Mga totoong endpoint ng API",
+    "card.explorer.body": "Nakabinbin ang paglulunsad. Ang buong bloke, txid, at paghahanap ng address ay nangangailangan ng totoong naka-index na data.",
+    "card.explorer.title": "Pag-index ng Explorer",
+    "card.reserve.body": "Aktibo ang pagsubaybay sa burn address. Ang mga reserve balances at mas detalyadong listahan ng tx ay dapat pa ring magmula sa totoong pagsubaybay sa chain.",
+    "card.reserve.title": "Pagsubaybay sa reserba at pagsunog",
+    "card.shell.body": "Paunang pinag-isang shell ng command center.",
+    "card.shell.title": "Shell ng website",
+    "hero.eyebrow": "Roadmap",
+    "hero.lead": "Ang mga aytem sa roadmap ay ipinapakita bilang mga katayuan. Ang mga nakabinbing gawain ay hindi ipinapakita bilang tapos na.",
+    "hero.title": "Roadmap ng Paggawa",
+    "meta.description": "Roadmap ng HOBC at nakabinbing gawain sa portal.",
+    "meta.title": "Roadmap"
+}

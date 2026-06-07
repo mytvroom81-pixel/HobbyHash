@@ -1,0 +1,15 @@
+{
+    "card.api.body": "Sehemu za mwisho za hali ya RPC/pool/pochi zenye hali halisi zisizopatikana.",
+    "card.api.title": "Sehemu halisi za mwisho za API",
+    "card.explorer.body": "Inasubiri uzinduzi. Kizuizi kamili, txid, na utafutaji wa anwani unahitaji data halisi iliyoorodheshwa.",
+    "card.explorer.title": "Uorodheshaji wa Explorer",
+    "card.reserve.body": "Ufuatiliaji wa anwani za Burn unaendelea. Salio la akiba na orodha tajiri za TX bado lazima zitoke kwenye ufuatiliaji halisi wa mnyororo.",
+    "card.reserve.title": "Weka nafasi na ufuatiliaji wa kuchoma",
+    "card.shell.body": "Ganda la awali la kituo cha amri kilichounganishwa.",
+    "card.shell.title": "Ganda la tovuti",
+    "hero.eyebrow": "Ramani ya barabara",
+    "hero.lead": "Vipengee vya ramani ya barabara vinaonyeshwa kama hali. Kazi inayosubiri haijawasilishwa kama imekamilika.",
+    "hero.title": "Jenga Ramani ya Barabara",
+    "meta.description": "Ramani ya HOBC na kazi ya lango inayosubiriwa.",
+    "meta.title": "Ramani ya barabara"
+}

@@ -1,0 +1,11 @@
+{
+    "heading.recent_blocks": "Khối gần đây",
+    "heading.recent_transactions": "Giao dịch gần đây",
+    "hero.eyebrow": "Chỉ có dữ liệu thực",
+    "hero.lead": "Số liệu thống kê được lấy từ các điểm cuối API cục bộ. Các trường bị thiếu vẫn hiển thị chính xác: đang đồng bộ, ngoại tuyến, đang chờ khởi chạy hoặc chưa khả dụng.",
+    "hero.title": "Thống kê HOBC",
+    "meta.description": "Số liệu thống kê thực tế về chuỗi, pool, ví và explorer của HOBC.",
+    "meta.title": "Thống kê",
+    "notice.loading_blocks": "Đang tải các khối mới nhất...",
+    "notice.loading_transactions": "Đang tải các giao dịch mới nhất..."
+}

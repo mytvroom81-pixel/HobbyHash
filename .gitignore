@@ -1,0 +1,33 @@
+# HobbyHash Coin — GitHub repo root
+# Only public_html/ and social-bot/ are tracked. Everything else on the server stays local.
+
+# Ignore all top-level home-dir items by default
+/*
+!/.gitignore
+!/README.md
+!/docs/
+!/docs/**
+!/scripts/
+!/scripts/**
+!/public_html/
+!/public_html/**
+!/social-bot/
+!/social-bot/**
+
+# Never track server-only paths even if nested
+**/.env
+!**/.env.example
+**/config.php
+!**/config.example.php
+!**/wallet-config.example.php
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/admin/data/
+**/*credentials*.json
+**/*service-account*.json
+**/*.pem
+**/*.key
+**/internal-token
+**/.ssh/
+**/Maildir/

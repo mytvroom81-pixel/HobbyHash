@@ -1,0 +1,21 @@
+{
+    "card.home_mining.body": "HOBC בנוי סביב כריית SHA-256 ביתית וסולו עם מדריכי התקנה פשוטים.",
+    "card.home_mining.title": "כריית סולו ביתית",
+    "card.pools.body": "מאגר ראשי לכורי ASIC ומאגר ננו לכורי SHA-256 קטנים. מאגרים בודדים בלבד.",
+    "card.pools.title": "בריכות ראשיות וננו-בריכות",
+    "card.transparent.body": "הפורטל יציג סטטוס אמין של שרשרת, מאגר, רזרבה, שריפה, אקספלורר וארנק. אין נתונים מזויפים.",
+    "card.transparent.title": "השקה שקופה",
+    "expected_launch": "השקה צפויה:",
+    "link.privacy": "מדיניות פרטיות",
+    "link.terms": "תנאים",
+    "maintenance_window.end": "סוֹף:",
+    "maintenance_window.not_set": "לא מוגדר",
+    "maintenance_window.start": "הַתחָלָה:",
+    "maintenance_window.title": "חלון תחזוקה",
+    "meta.description_maintenance": "אתר האינטרנט HOBC אינו זמין באופן זמני לצורך השלמת עבודות תחזוקה.",
+    "meta.description_prelaunch": "מרכז הפיקוד HobbyHash Coin נמצא בהכנה. בקרוב: מדריכים לכרייה סולו ביתית, מאגרי סולו ראשיים וננו, אקספלורר, סטטיסטיקות, הורדות, שקיפות עתודות השקה, מעקב אחר צריבה, מסמכים וגישה לארנק משמורת עם הודעות סיכון ברורות.",
+    "meta.title_maintenance": "HOBC נמצא בתחזוקה",
+    "meta.title_prelaunch": "HOBC מתכונן לשיגור",
+    "status.maintenance": "מצב תחזוקה",
+    "status.pre_launch": "טרום השקה"
+}

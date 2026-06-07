@@ -1,0 +1,11 @@
+{
+    "heading.recent_blocks": "최근 블록",
+    "heading.recent_transactions": "최근 거래 내역",
+    "hero.eyebrow": "실제 데이터만",
+    "hero.lead": "통계 정보는 로컬 API 엔드포인트에서 가져옵니다. 누락된 필드는 '동기화 중', '오프라인', '출시 대기 중', '아직 사용 불가'와 같이 있는 그대로 표시됩니다.",
+    "hero.title": "HOBC 통계",
+    "meta.description": "실제 HOBC 체인, 풀, 지갑 및 탐색기 통계입니다.",
+    "meta.title": "통계",
+    "notice.loading_blocks": "최신 블록을 불러오는 중...",
+    "notice.loading_transactions": "최근 거래 내역을 불러오는 중..."
+}

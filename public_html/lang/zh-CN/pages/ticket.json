@@ -1,0 +1,20 @@
+{
+    "button.add_reply": "添加回复",
+    "error.closed": "此工单已关闭。",
+    "error.message_required": "必须填写信息。",
+    "error.not_found": "未找到票证。",
+    "label.reply": "回复",
+    "label.status": "地位：",
+    "meta.description": "跟踪您的 HOBC 支持工单。",
+    "meta.title": "票",
+    "sender.admin": "支持",
+    "sender.guest": "客人",
+    "sender.system": "系统",
+    "sender.user": "你",
+    "status.closed": "关闭",
+    "status.open": "打开",
+    "status.waiting_admin": "等待支持",
+    "status.waiting_user": "等你",
+    "success.reply_added": "回复已添加。",
+    "title": "支持工单"
+}

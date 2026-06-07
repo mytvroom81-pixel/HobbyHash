@@ -1,0 +1,21 @@
+{
+    "email.ticket_created_html": "<p> ตั๋วสนับสนุน HOBC ของคุณถูกสร้างขึ้นแล้ว เราจะตอบกลับโดยเร็วที่สุด </p>",
+    "email.ticket_created_text": "ระบบได้สร้างตั๋วขอความช่วยเหลือหมายเลข HOBC ของคุณแล้ว เราจะตอบกลับโดยเร็วที่สุด",
+    "error.please_enter_a_valid_email_address": "โปรดป้อนที่อยู่อีเมลที่ถูกต้อง",
+    "error.please_fill_out_all_fields": "โปรดกรอกข้อมูลในทุกช่อง",
+    "error.ticket_could_not_be_created": "ไม่สามารถสร้างตั๋วได้",
+    "form.email_label": "อีเมล",
+    "form.message_label": "ข้อความ",
+    "form.name_label": "ชื่อ",
+    "form.section_label": "คุณต้องการความช่วยเหลือในเรื่องใด",
+    "form.subject_label": "เรื่อง",
+    "form.submit": "สร้างตั๋ว",
+    "form.title": "สนับสนุน",
+    "hero.eyebrow": "การสนับสนุน HOBC",
+    "hero.lead": "เปิดตั๋วขอความช่วยเหลือสำหรับส่วนเว็บไซต์ HOBC ที่เลือกไว้",
+    "hero.title": "สนับสนุน",
+    "meta.description": "เปิดตั๋วขอความช่วยเหลือหมายเลข HOBC",
+    "meta.title": "ติดต่อฝ่ายสนับสนุน",
+    "success.created": "สร้างตั๋วแล้ว ติดตามสถานะได้ที่นี่:",
+    "wallet_layout.title": "ติดต่อ"
+}

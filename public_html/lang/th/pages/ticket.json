@@ -1,0 +1,20 @@
+{
+    "button.add_reply": "เพิ่มคำตอบ",
+    "error.closed": "ตั๋วนี้ปิดแล้ว",
+    "error.message_required": "จำเป็นต้องระบุข้อความ",
+    "error.not_found": "ไม่พบตั๋ว",
+    "label.reply": "ตอบ",
+    "label.status": "สถานะ:",
+    "meta.description": "ติดตามสถานะตั๋วสนับสนุน HOBC ของคุณ",
+    "meta.title": "ตั๋ว",
+    "sender.admin": "สนับสนุน",
+    "sender.guest": "แขก",
+    "sender.system": "ระบบ",
+    "sender.user": "คุณ",
+    "status.closed": "ปิด",
+    "status.open": "เปิด",
+    "status.waiting_admin": "กำลังรอการสนับสนุน",
+    "status.waiting_user": "กำลังรอคุณอยู่",
+    "success.reply_added": "เพิ่มคำตอบแล้ว",
+    "title": "ตั๋วขอความช่วยเหลือ"
+}

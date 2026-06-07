@@ -1,0 +1,20 @@
+{
+    "button.add_reply": "Ajouter une réponse",
+    "error.closed": "Ce ticket est clos.",
+    "error.message_required": "Message requis.",
+    "error.not_found": "Billet introuvable.",
+    "label.reply": "Répondre",
+    "label.status": "Statut:",
+    "meta.description": "Suivez votre ticket d'assistance HOBC.",
+    "meta.title": "Billet",
+    "sender.admin": "Soutien",
+    "sender.guest": "Invité",
+    "sender.system": "Système",
+    "sender.user": "Toi",
+    "status.closed": "Fermé",
+    "status.open": "Ouvrir",
+    "status.waiting_admin": "En attente de soutien",
+    "status.waiting_user": "Dans votre attente",
+    "success.reply_added": "Réponse ajoutée.",
+    "title": "Ticket d'assistance"
+}

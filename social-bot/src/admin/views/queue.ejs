@@ -1,0 +1,27 @@
+<%- include('partials/head', { title: 'Queue' }) %>
+<%- include('partials/nav') %>
+<main>
+  <h2>Approval queue</h2>
+  <% if (posts.length === 0) { %><p>No posts awaiting action.</p><% } %>
+  <% posts.forEach(p => { %>
+  <div class="card">
+    <span class="badge badge-<%= p.status %>"><%= p.status %></span>
+    <strong><%= p.platform %></strong> — <%= p.topic %> (<%= p.tone %>)
+    <div class="content-preview"><%= p.content %></div>
+    <small style="color:var(--muted)"><%= p.created_at %></small>
+    <% if (p.status === 'pending') { %>
+    <div style="margin-top:0.75rem">
+      <form class="inline" method="POST" action="/admin/queue/<%= p.id %>/approve">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <button class="btn btn-primary">Approve & publish</button>
+      </form>
+      <form class="inline" method="POST" action="/admin/queue/<%= p.id %>/reject">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <button class="btn btn-danger">Reject</button>
+      </form>
+    </div>
+    <% } %>
+  </div>
+  <% }) %>
+</main>
+<%- include('partials/foot') %>

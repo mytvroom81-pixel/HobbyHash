@@ -1,0 +1,36 @@
+<%- include('partials/head', { title: 'Settings' }) %>
+<%- include('partials/nav') %>
+<main>
+  <h2>Posting settings</h2>
+  <form method="POST" action="/admin/settings" class="card">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    <h3>Schedule</h3>
+    <label>Min hours between posts</label>
+    <input type="number" name="min_hours" step="0.5" value="<%= settings.posting_schedule?.min_hours || 3 %>">
+    <label>Max hours between posts (force post after)</label>
+    <input type="number" name="max_hours" step="0.5" value="<%= settings.posting_schedule?.max_hours || 6 %>">
+    <label>Post probability per 15-min tick (0-1)</label>
+    <input type="number" name="post_probability" step="0.05" min="0" max="1" value="<%= settings.posting_schedule?.post_probability || 0.25 %>">
+    <label>Max posts per day per platform</label>
+    <input type="number" name="max_posts_per_day" value="<%= settings.max_posts_per_day || 5 %>">
+    <h3>Quiet hours (UTC)</h3>
+    <label><input type="checkbox" name="quiet_enabled" value="1" <%= settings.quiet_hours?.enabled ? 'checked' : '' %>> Enable quiet hours</label>
+    <label>Start hour (0-23)</label>
+    <input type="number" name="quiet_start" min="0" max="23" value="<%= settings.quiet_hours?.start ?? 23 %>">
+    <label>End hour (0-23)</label>
+    <input type="number" name="quiet_end" min="0" max="23" value="<%= settings.quiet_hours?.end ?? 7 %>">
+    <h3>Approval mode</h3>
+    <label>Auto post mode</label>
+    <select name="auto_post_mode">
+      <option value="approval" <%= settings.auto_post_mode === 'approval' ? 'selected' : '' %>>Require approval</option>
+      <option value="auto" <%= settings.auto_post_mode === 'auto' ? 'selected' : '' %>>Full auto</option>
+    </select>
+    <h3>Replies</h3>
+    <label><input type="checkbox" name="replies_enabled" value="1" <%= settings.replies_enabled !== false ? 'checked' : '' %>> Enable FAQ replies</label>
+    <label><input type="checkbox" name="require_reply_approval" value="1" <%= settings.require_reply_approval ? 'checked' : '' %>> Require approval for all replies</label>
+    <label>Min confidence to auto-reply (0-1)</label>
+    <input type="number" name="reply_min_confidence" step="0.05" min="0" max="1" value="<%= settings.reply_min_confidence ?? 0.6 %>">
+    <button type="submit" class="btn btn-primary">Save settings</button>
+  </form>
+</main>
+<%- include('partials/foot') %>

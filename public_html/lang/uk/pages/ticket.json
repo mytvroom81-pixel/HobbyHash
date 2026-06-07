@@ -1,0 +1,20 @@
+{
+    "button.add_reply": "Додати відповідь",
+    "error.closed": "Цей квиток закрито.",
+    "error.message_required": "Повідомлення обов'язкове.",
+    "error.not_found": "Квиток не знайдено.",
+    "label.reply": "Відповідь",
+    "label.status": "Статус:",
+    "meta.description": "Відстежуйте свій запит на підтримку HOBC.",
+    "meta.title": "Квиток",
+    "sender.admin": "Підтримка",
+    "sender.guest": "Гість",
+    "sender.system": "Система",
+    "sender.user": "Ви",
+    "status.closed": "ЗАЧИНЕНО",
+    "status.open": "ВІДЧИНЕНО",
+    "status.waiting_admin": "Чекаємо на підтримку",
+    "status.waiting_user": "Чекаю на тебе",
+    "success.reply_added": "Відповідь додано.",
+    "title": "Запит служби підтримки"
+}

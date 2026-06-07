@@ -1,0 +1,21 @@
+{
+    "email.ticket_created_html": "HOBPLH0000آپ کا HOBPLH0002 سپورٹ ٹکٹ بن گیا تھا۔ ہم جلد از جلد جواب دیں گے۔HOBPLH0001",
+    "email.ticket_created_text": "آپ کا HOBPLH0000 سپورٹ ٹکٹ بن گیا تھا۔ ہم جلد از جلد جواب دیں گے۔",
+    "error.please_enter_a_valid_email_address": "براہ کرم ایک درست ای میل ایڈریس درج کریں۔",
+    "error.please_fill_out_all_fields": "براہ کرم تمام فیلڈز کو پُر کریں۔",
+    "error.ticket_could_not_be_created": "ٹکٹ نہیں بن سکا۔",
+    "form.email_label": "ای میل",
+    "form.message_label": "پیغام",
+    "form.name_label": "نام",
+    "form.section_label": "آپ کو کس چیز میں مدد کی ضرورت ہے؟",
+    "form.subject_label": "موضوع",
+    "form.submit": "ٹکٹ بنائیں",
+    "form.title": "حمایت",
+    "hero.eyebrow": "HOBPLH0000 سپورٹ",
+    "hero.lead": "منتخب کردہ HOBPLH0000 ویب سائٹ سیکشن کے لیے سپورٹ ٹکٹ کھولیں۔",
+    "hero.title": "حمایت",
+    "meta.description": "HOBPLH0000 سپورٹ ٹکٹ کھولیں۔",
+    "meta.title": "سپورٹ سے رابطہ کریں۔",
+    "success.created": "ٹکٹ بنایا۔ اسے یہاں ٹریک کریں:",
+    "wallet_layout.title": "رابطہ کریں۔"
+}

@@ -1,0 +1,21 @@
+{
+    "card.home_mining.body": "HOBC को SHA-256 होम सोलो माइनिंग के आधार पर बनाया गया है, जिसमें सरल सेटअप गाइड शामिल हैं।",
+    "card.home_mining.title": "घर पर अकेले खनन करना",
+    "card.pools.body": "ASIC माइनर्स के लिए मेन पूल और छोटे SHA-256 माइनर्स के लिए नैनो पूल। केवल सोलो पूल।",
+    "card.pools.title": "मुख्य और नैनो पूल",
+    "card.transparent.body": "यह पोर्टल चेन, पूल, रिजर्व, बर्न, एक्सप्लोरर और वॉलेट की वास्तविक स्थिति दिखाएगा। कोई फर्जी डेटा नहीं होगा।",
+    "card.transparent.title": "पारदर्शी लॉन्च",
+    "expected_launch": "संभावित लॉन्च:",
+    "link.privacy": "गोपनीयता नीति",
+    "link.terms": "शर्तें",
+    "maintenance_window.end": "अंत:",
+    "maintenance_window.not_set": "सेट नहीं",
+    "maintenance_window.start": "शुरू करना:",
+    "maintenance_window.title": "रखरखाव विंडो",
+    "meta.description_maintenance": "रखरखाव कार्य पूरा होने तक HOBC वेबसाइट अस्थायी रूप से अनुपलब्ध है।",
+    "meta.description_prelaunch": "HobbyHash Coin कमांड सेंटर तैयार किया जा रहा है। जल्द ही उपलब्ध होगा: होम सोलो माइनिंग गाइड, मेन और नैनो सोलो पूल, एक्सप्लोरर, स्टैट्स, डाउनलोड्स, लॉन्च रिजर्व ट्रांसपेरेंसी, बर्न ट्रैकिंग, डॉक्स और स्पष्ट जोखिम सूचनाओं के साथ कस्टोडियल वॉलेट एक्सेस।",
+    "meta.title_maintenance": "HOBC रखरखाव के अधीन है",
+    "meta.title_prelaunch": "HOBC लॉन्च होने के लिए तैयार है।",
+    "status.maintenance": "रखरखाव मोड",
+    "status.pre_launch": "प्री-लॉन्च"
+}

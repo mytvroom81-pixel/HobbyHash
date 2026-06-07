@@ -1,0 +1,11 @@
+{
+    "heading.recent_blocks": "Bloques recientes",
+    "heading.recent_transactions": "Transacciones recientes",
+    "hero.eyebrow": "Solo datos reales",
+    "hero.lead": "Las estadísticas se obtienen de los puntos finales de la API local. Los campos que faltan se mantienen sin cambios: sincronizando, sin conexión, lanzamiento pendiente o aún no disponible.",
+    "hero.title": "Estadísticas de HOBC",
+    "meta.description": "Estadísticas reales de la cadena, pool, monedero y explorador HOBC.",
+    "meta.title": "Estadísticas",
+    "notice.loading_blocks": "Cargando los últimos bloques...",
+    "notice.loading_transactions": "Cargando las últimas transacciones..."
+}

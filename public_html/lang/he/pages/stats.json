@@ -1,0 +1,11 @@
+{
+    "heading.recent_blocks": "חסימות אחרונות",
+    "heading.recent_transactions": "עסקאות אחרונות",
+    "hero.eyebrow": "נתונים אמיתיים בלבד",
+    "hero.lead": "סטטיסטיקות מאוכלסות מנקודות קצה מקומיות של ה-API. שדות חסרים נשארים תקינים: סנכרון, לא מקוון, ממתין להשקה או עדיין לא זמין.",
+    "hero.title": "סטטיסטיקות HOBC",
+    "meta.description": "סטטיסטיקות אמיתיות של שרשרת HOBC, מאגר, ארנק וחוקר.",
+    "meta.title": "סטטיסטיקות",
+    "notice.loading_blocks": "טוען את הבלוקים האחרונים...",
+    "notice.loading_transactions": "טוען את העסקאות האחרונות..."
+}

@@ -1,0 +1,15 @@
+{
+    "card.api.body": "Endpoint di stato locali RPC/pool/wallet con stati di non disponibilità onesti.",
+    "card.api.title": "Endpoint API reali",
+    "card.explorer.body": "Lancio in sospeso. La ricerca completa del blocco, txid e dell'indirizzo richiede dati indicizzati reali.",
+    "card.explorer.title": "Indicizzazione di Esplora",
+    "card.reserve.body": "Il tracciamento degli indirizzi di burn è attivo. I saldi di riserva e gli elenchi di transazioni più dettagliati devono comunque provenire dal tracciamento reale della blockchain.",
+    "card.reserve.title": "Tracciamento di reti e bruciature",
+    "card.shell.body": "Shell iniziale del centro di comando unificato.",
+    "card.shell.title": "Sito web",
+    "hero.eyebrow": "Tabella di marcia",
+    "hero.lead": "Gli elementi della roadmap vengono visualizzati come stati. I lavori in sospeso non vengono presentati come completati.",
+    "hero.title": "Creazione della roadmap",
+    "meta.description": "Tabella di marcia e lavori in corso sul portale per il progetto HOBC.",
+    "meta.title": "Tabella di marcia"
+}
