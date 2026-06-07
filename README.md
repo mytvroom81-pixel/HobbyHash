@@ -8,12 +8,18 @@ This repository contains **application source only**. Server secrets, chain data
 
 | Path | Purpose |
 |------|---------|
-| `public_html/` | PHP portal, wallet, admin, APIs, translations |
+| `public_html/app/` | PHP backend logic (wallet, admin, i18n, analytics) |
+| `public_html/api/` | Public JSON APIs |
+| `public_html/jobs/` | CLI maintenance and i18n jobs |
+| `public_html/includes/` | Shared layout partials |
+| `public_html/lang/` | Translation catalogs |
+| `public_html/assets/` | CSS, JS, images |
 | `social-bot/` | Node.js social posting service (Discord / X / Facebook) |
 | `docs/` | Deployment templates (no live secrets) |
 
 ## What's excluded (stays on server)
 
+- **HTML portal pages** — `index.php`, docs, mining, pool, wallet UI, admin UI, etc.
 - `public_html/.env` — Google Translate keys, wallet config path
 - `hobbyhash-wallet-private/config.php` — DB, RPC, Twilio, salts
 - `social-bot/.env` and `social-bot/data/` — bot tokens, SQLite DB
