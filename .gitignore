@@ -1,5 +1,5 @@
-# HobbyHash Coin — node, wallet, and pool source only
-# Web portal (public_html) and social-bot stay on the server.
+# HOBC node source only — builds hobbyhashd, hobbyhash-cli, hobbyhash-tx,
+# hobbyhash-util, hobbyhash-wallet locally. No website, wallets apps, or pools.
 
 /*
 !/.gitignore
@@ -7,20 +7,29 @@
 !/scripts/
 !/scripts/**
 !/hobbyhash-clean/
-!/hobbyhash-clean/**
+!/hobbyhash-clean/src/
+!/hobbyhash-clean/src/**
 
-# Never commit secrets or live config
+# Never commit secrets
 **/.env
-!**/.env.example
 **/config.php
-!**/config.example.php
 **/*credentials*.json
-**/*service-account*.json
 **/*.pem
 **/*.key
-**/internal-token
 
-# Build outputs and runtime data
+# Compiled binaries — build on each machine, never commit
+**/hobbyhashd
+**/hobbyhash-cli
+**/hobbyhash-tx
+**/hobbyhash-util
+**/hobbyhash-wallet
+**/bitcoind
+**/bitcoin-cli
+**/bitcoin-tx
+**/bitcoin-util
+**/bitcoin-wallet
+
+# Build outputs
 **/node_modules/
 **/release-*/
 **/autom4te.cache/
@@ -33,20 +42,12 @@
 **/*.a
 **/*.lo
 **/*.la
-**/*.db
-**/*.db-shm
-**/*.db-wal
 **/*.exe
 **/*.tar.gz
 **/*.zip
-**/*.7z
 **/dist/
 **/build/
 !**/build_msvc/
 !**/build-aux/
 
-# Windows builds (Linux-focused repo)
-/hobbyhash-clean/WIN/
-
-# Nested repos — contents tracked in this monorepo instead
 **/.git/

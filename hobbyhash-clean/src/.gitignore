@@ -150,3 +150,10 @@ dist/
 /guix-build-*
 
 /ci/scratch/
+
+# HOBC rebrand binaries (build locally — never commit)
+src/hobbyhashd
+src/hobbyhash-cli
+src/hobbyhash-tx
+src/hobbyhash-util
+src/hobbyhash-wallet
