@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HobbyHash Cold Wallet</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="coin-mark" aria-hidden="true">H</div>
+        <div>
+          <p class="eyebrow">HobbyHash Coin</p>
+          <h1>HobbyHash Cold Wallet</h1>
+          <p class="ticker">HOBC · Cold Storage Wallet · Est. 2026</p>
+        </div>
+
+        <nav class="nav-tabs" aria-label="Wallet screens">
+          <button class="nav-tab is-active" data-view="home">Home</button>
+          <button class="nav-tab" data-view="network">Mainnet Status</button>
+          <button class="nav-tab" data-view="create">Create Wallet</button>
+          <button class="nav-tab" data-view="restore">Restore Wallet</button>
+          <button class="nav-tab" data-view="receive">Receive</button>
+          <button class="nav-tab" data-view="sign">Offline Signing</button>
+          <button class="nav-tab" data-view="storage">Encrypted Storage</button>
+        </nav>
+
+        <button id="panic-lock" class="panic-button" type="button">Panic Lock</button>
+        <p class="small muted">Clears displayed sensitive data from this screen. It does not delete encrypted local storage.</p>
+      </aside>
+
+      <main class="main-panel">
+        <section class="status-strip" aria-label="Security status">
+          <div>
+            <span>Network</span>
+            <strong>Internet disabled by design</strong>
+          </div>
+          <div>
+            <span>Custody</span>
+            <strong>Offline / non-custodial</strong>
+          </div>
+          <div>
+            <span>Broadcasting</span>
+            <strong>Not available in this app</strong>
+          </div>
+        </section>
+
+        <div id="app-alert" class="alert" hidden></div>
+
+        <section id="view-home" class="view is-active">
+          <div class="hero-card">
+            <p class="eyebrow">HOBC Cold Storage</p>
+            <h2>Generate, restore, receive, and sign fully offline.</h2>
+            <p>
+              HobbyHash Cold Wallet is built for an offline Windows PC. Offline cold storage wallet. This app does not connect
+              to the internet, RPC, explorer, or mining pool.
+            </p>
+            <div class="callout warning">
+              <strong>Offline-use warning:</strong>
+              Keep this app on an air-gapped computer. Never type your recovery phrase into a website, chat, support form,
+              hosted wallet, or online computer.
+            </div>
+          </div>
+
+          <div class="grid three">
+            <article class="card">
+              <h3>Local seed generation</h3>
+              <p>Creates a 24-word BIP39 recovery phrase with secure random bytes on this computer only.</p>
+            </article>
+            <article class="card">
+              <h3>HOBC receive addresses</h3>
+              <p>Derives native segwit addresses using the HobbyHash Coin network HRP and prefixes.</p>
+            </article>
+            <article class="card">
+              <h3>Offline signing</h3>
+              <p>Imports unsigned transaction JSON or PSBT-style files from USB and exports signed files only.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="view-network" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Mainnet Status</p>
+            <h2>HobbyHash Coin network facts</h2>
+            <p class="muted">These values are informational only. This cold wallet never connects to any network endpoint.</p>
+          </div>
+          <div class="grid two">
+            <article class="card">
+              <h3>Official network</h3>
+              <div class="table-like">
+                <div class="table-row"><span>Coin</span><strong>HobbyHash Coin</strong></div>
+                <div class="table-row"><span>Ticker</span><strong>HOBC</strong></div>
+                <div class="table-row"><span>Network</span><strong>Mainnet</strong></div>
+                <div class="table-row"><span>Mainnet status</span><strong>Ready - checkpoint valid</strong></div>
+                <div class="table-row"><span>Genesis status</span><strong>Unique HOBC genesis</strong></div>
+                <div class="table-row"><span>Public node/P2P</span><strong>hobbyhashcoin.com:18761</strong></div>
+                <div class="table-row"><span>Mainnet P2P Port</span><strong>18761</strong></div>
+              </div>
+            </article>
+            <article class="card">
+              <h3>Cold wallet policy</h3>
+              <div class="table-like">
+                <div class="table-row"><span>Mainnet RPC Port</span><strong>Disabled by design</strong></div>
+                <div class="table-row"><span>Internet</span><strong>Disabled by design</strong></div>
+                <div class="table-row"><span>Signing</span><strong>Offline only</strong></div>
+                <div class="table-row"><span>Explorer calls</span><strong>Disabled</strong></div>
+                <div class="table-row"><span>Mining pool calls</span><strong>Disabled</strong></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="view-create" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Create Wallet</p>
+            <h2>Generate a new 24-word recovery phrase</h2>
+          </div>
+          <div class="card">
+            <p>This phrase is generated locally and displayed once. It is not saved unless you choose encrypted local storage.</p>
+            <button id="generate-wallet" class="primary-button" type="button">Generate New Offline Wallet</button>
+            <div id="mnemonic-panel" class="mnemonic-panel" hidden>
+              <div class="callout danger">
+                <strong>Write this down offline.</strong>
+                Anyone with these 24 words can spend your HOBC. This app will not send or upload them.
+              </div>
+              <ol id="mnemonic-words" class="mnemonic-words"></ol>
+              <label class="check-row">
+                <input id="saved-phrase-confirm" type="checkbox">
+                I saved this phrase offline and understand it cannot be recovered by HobbyHash Coin.
+              </label>
+              <button id="use-created-wallet" type="button">Continue to Receive Addresses</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="view-restore" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Restore Wallet</p>
+            <h2>Restore from a 24-word recovery phrase</h2>
+          </div>
+          <div class="card">
+            <label for="restore-phrase">Recovery phrase</label>
+            <textarea id="restore-phrase" rows="5" spellcheck="false" autocomplete="off" placeholder="word1 word2 word3 ... word24"></textarea>
+            <button id="restore-wallet" class="primary-button" type="button">Restore Offline Wallet</button>
+          </div>
+        </section>
+
+        <section id="view-receive" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Receive</p>
+            <h2>First 20 HOBC receive addresses</h2>
+            <p id="receive-empty" class="muted">Create, restore, or unlock a wallet to show receive addresses.</p>
+          </div>
+          <div id="receive-grid" class="receive-layout" hidden>
+            <div class="card address-list-card">
+              <div class="button-row receive-actions">
+                <button id="export-watch-only" class="primary-button" type="button">Export Watch-Only File</button>
+              </div>
+              <div id="address-list" class="address-list"></div>
+            </div>
+            <div class="card qr-card">
+              <h3>Selected address QR</h3>
+              <img id="address-qr" alt="Selected HOBC receive address QR code" hidden>
+              <code id="selected-address" class="selected-address"></code>
+              <button id="copy-selected-address" type="button">Copy Selected Address</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="view-sign" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Offline Signing</p>
+            <h2>Import unsigned transaction data from USB</h2>
+            <p class="muted">This app signs locally and exports a signed file. It never broadcasts transactions.</p>
+          </div>
+          <div class="grid two">
+            <div class="card">
+              <label for="unsigned-file">Unsigned transaction JSON or PSBT-style file</label>
+              <input id="unsigned-file" type="file" accept=".json,.psbt,.txt">
+              <textarea id="unsigned-payload" rows="10" spellcheck="false" placeholder="Paste unsigned transaction JSON, PSBT base64, or PSBT JSON here."></textarea>
+              <button id="sign-transaction" class="primary-button" type="button">Sign Locally</button>
+            </div>
+            <div class="card">
+              <h3>Signed output</h3>
+              <pre id="signed-output" class="signed-output">No signed transaction yet.</pre>
+              <button id="export-signed-file" type="button" disabled>Export Signed File</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="view-storage" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Encrypted Storage</p>
+            <h2>Optional local encrypted wallet save</h2>
+            <p class="muted">Only encrypted data is stored in the user profile folder. Plaintext mnemonics are never written to disk.</p>
+          </div>
+          <div class="grid two">
+            <div class="card">
+              <h3>Save current wallet</h3>
+              <label for="save-password">Password</label>
+              <input id="save-password" type="password" autocomplete="new-password" placeholder="Minimum 12 characters">
+              <button id="save-encrypted-wallet" class="primary-button" type="button">Save Encrypted Wallet Locally</button>
+            </div>
+            <div class="card">
+              <h3>Unlock saved wallet</h3>
+              <p id="storage-location" class="small muted">Checking local storage...</p>
+              <label for="unlock-password">Password</label>
+              <input id="unlock-password" type="password" autocomplete="current-password">
+              <div class="button-row">
+                <button id="unlock-wallet" type="button">Unlock</button>
+                <button id="delete-encrypted-wallet" class="secondary-danger" type="button">Delete Encrypted File</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>

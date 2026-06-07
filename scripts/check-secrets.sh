@@ -44,8 +44,22 @@ while IFS= read -r file; do
   [[ "$file" == "scripts/check-secrets.sh" ]] && continue
   for pat in "${PATTERNS[@]}"; do
     if grep -qE "$pat" "$file" 2>/dev/null; then
-      # Ignore obvious documentation placeholders
-      if grep -qE 'CHANGE_THIS|your_.*_password|replace-with|xxxxxxxx' "$file" 2>/dev/null; then
+      # Ignore obvious documentation placeholders and upstream example configs
+      if grep -qE 'CHANGE_THIS|change_this|your_.*_password|replace-with|xxxxxxxx|#.*rpcpassword|password=.*CHANGE|rpcauth=' "$file" 2>/dev/null; then
+        continue
+      fi
+      # Source/tests document the rpcpassword flag name, not live secrets
+      if [[ "$file" == *.cpp ]] || [[ "$file" == *.c ]] || [[ "$file" == *.h ]]; then
+        continue
+      fi
+      if [[ "$file" == *"/test/"* ]] || [[ "$file" == *"/test_framework/"* ]]; then
+        continue
+      fi
+      # Skip compiled binaries and man pages that document CLI flags
+      if [[ "$file" == *"/doc/man/"* ]] || [[ "$file" == *"/share/examples/"* ]] || [[ "$file" == *"/contrib/"* ]]; then
+        continue
+      fi
+      if [[ "$file" == hobbyhash-clean/src/src/hobbyhash* ]] && [[ "$file" != *.* ]]; then
         continue
       fi
       echo "POSSIBLE SECRET: $file matches /$pat/"

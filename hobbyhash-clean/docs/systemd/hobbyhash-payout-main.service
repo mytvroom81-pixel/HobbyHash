@@ -1,0 +1,16 @@
+[Unit]
+Description=HobbyHash payout daemon main (HOBC solo)
+After=network-online.target hobbyhash-ckpool-main.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=hobbyhashcoin
+Group=hobbyhashcoin
+WorkingDirectory=/home/hobbyhashcoin/hobbyhash-clean
+ExecStart=/usr/bin/python3 /home/hobbyhashcoin/hobbyhash-clean/scripts/payoutd.py --config /home/hobbyhashcoin/hobbyhash-conf/hobbyhash-payout-main.json
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

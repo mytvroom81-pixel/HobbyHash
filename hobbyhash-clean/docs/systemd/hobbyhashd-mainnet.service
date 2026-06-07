@@ -1,0 +1,20 @@
+[Unit]
+Description=HobbyHash Coin mainnet node
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=forking
+User=hobbyhashcoin
+Group=hobbyhashcoin
+ExecStart=/home/hobbyhashcoin/bin/hobbyhashd -conf=/home/hobbyhashcoin/hobbyhash-conf/hobbyhash-mainnet.conf -daemonwait
+ExecStop=/home/hobbyhashcoin/bin/hobbyhash-cli -conf=/home/hobbyhashcoin/hobbyhash-conf/hobbyhash-mainnet.conf stop
+Restart=on-failure
+RestartSec=10
+TimeoutStartSec=120
+TimeoutStopSec=120
+PrivateTmp=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

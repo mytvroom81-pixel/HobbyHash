@@ -1,58 +1,52 @@
-# HobbyHash Coin — GitHub repo root
-# Only public_html/ and social-bot/ are tracked. Everything else on the server stays local.
+# HobbyHash Coin — node, wallet, and pool source only
+# Web portal (public_html) and social-bot stay on the server.
 
-# Ignore all top-level home-dir items by default
 /*
 !/.gitignore
 !/README.md
-!/docs/
-!/docs/**
 !/scripts/
 !/scripts/**
-!/public_html/
-!/public_html/**
-!/social-bot/
-!/social-bot/**
+!/hobbyhash-clean/
+!/hobbyhash-clean/**
 
-# Never track server-only paths even if nested
+# Never commit secrets or live config
 **/.env
 !**/.env.example
 **/config.php
 !**/config.example.php
-!**/wallet-config.example.php
-**/*.db
-**/*.db-shm
-**/*.db-wal
-**/admin/data/
 **/*credentials*.json
 **/*service-account*.json
 **/*.pem
 **/*.key
 **/internal-token
-**/.ssh/
-**/Maildir/
 
-# Public HTML/PHP pages — deployed on server, not tracked in Git
-public_html/index.php
-public_html/index.html
-public_html/contact.php
-public_html/faq.php
-public_html/ticket.php
-public_html/sitemap.xml
-public_html/about/
-public_html/burn/
-public_html/contact/
-public_html/docs/
-public_html/exchange-listing/
-public_html/explorer/
-public_html/faq/
-public_html/launch-reserve/
-public_html/mining/
-public_html/pool/
-public_html/privacy/
-public_html/roadmap/
-public_html/stats/
-public_html/terms/
-public_html/admin/*.php
-!public_html/admin/api/
-public_html/wallet/
+# Build outputs and runtime data
+**/node_modules/
+**/release-*/
+**/autom4te.cache/
+**/.deps/
+**/.libs/
+**/__pycache__/
+**/logs/
+**/*.log
+**/*.o
+**/*.a
+**/*.lo
+**/*.la
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/*.exe
+**/*.tar.gz
+**/*.zip
+**/*.7z
+**/dist/
+**/build/
+!**/build_msvc/
+!**/build-aux/
+
+# Windows builds (Linux-focused repo)
+/hobbyhash-clean/WIN/
+
+# Nested repos — contents tracked in this monorepo instead
+**/.git/

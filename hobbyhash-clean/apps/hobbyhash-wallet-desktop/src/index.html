@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HobbyHash Wallet</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body class="auth-pending">
+    <section id="startup-loading-screen" class="startup-loading-screen">
+      <article class="update-loading-card">
+        <p class="eyebrow">HobbyHash Wallet</p>
+        <h1 id="startup-loading-title">Loading Wallet</h1>
+        <p id="startup-loading-message">Preparing your wallet setup and starting the local node.</p>
+        <p id="startup-loading-detail" class="startup-loading-detail"></p>
+        <div class="startup-loading-progress" aria-label="Startup loading progress">
+          <span id="startup-loading-progress-bar"></span>
+        </div>
+        <p class="startup-loading-note"><span id="startup-loading-progress-text">0%</span> complete</p>
+      </article>
+    </section>
+    <section id="auth-lock-screen" class="auth-lock-screen" hidden>
+      <article class="auth-lock-card">
+        <p class="eyebrow">HobbyHash Wallet</p>
+        <h1>Enter Authenticator Code</h1>
+        <p>This wallet has authenticator protection enabled. Enter your current 6-digit code to open the program.</p>
+        <label for="startup-auth-code">Authenticator code</label>
+        <input id="startup-auth-code" inputmode="numeric" autocomplete="one-time-code" placeholder="123456">
+        <button id="startup-auth-unlock" class="primary-button" type="button">Unlock Wallet</button>
+        <p id="startup-auth-error" class="lock-error" hidden></p>
+      </article>
+    </section>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <p class="eyebrow">HobbyHash Coin</p>
+        <h1>HobbyHash Wallet</h1>
+        <p class="ticker">HOBC · Full-node wallet · Est. 2026</p>
+        <button id="start-wallet" class="primary-button" type="button">Start Wallet/Node</button>
+        <div id="sidebar-setup-note" class="sidebar-setup-note">
+          <strong>First-time setup needed</strong>
+          <span>Create or restore your first wallet on the Home page. The full wallet menu appears after setup.</span>
+        </div>
+        <nav class="nav-tabs" id="wallet-nav" aria-label="Wallet sections" hidden>
+          <button class="nav-tab is-active" data-view="home">Home</button>
+          <button class="nav-tab" data-view="receive">Receive</button>
+          <button class="nav-tab" data-view="send">Send</button>
+          <button class="nav-tab" data-view="transactions">Transactions</button>
+          <button class="nav-tab" data-view="security">Security</button>
+          <button class="nav-tab" data-view="backup">Backup</button>
+          <button class="nav-tab" data-view="advanced">Advanced</button>
+        </nav>
+        <button id="homepage-link" class="homepage-link" type="button">hobbyhashcoin.com</button>
+      </aside>
+
+      <main class="main-panel">
+        <section class="status-strip">
+          <div><span>Network</span><strong id="network-status">Not started</strong></div>
+          <div><span>Sync</span><strong id="sync-status">Waiting</strong></div>
+          <div><span>Balance</span><strong id="balance-status">0.00000000 HOBC</strong></div>
+        </section>
+
+        <div id="app-alert" class="alert" hidden></div>
+
+        <section id="view-home" class="view is-active">
+          <section class="wallet-dashboard-grid" id="wallet-dashboard" aria-label="Wallet dashboard">
+            <article class="metric-card">
+              <span class="metric-label">HobbyHash Wallet: Total HOBC Balance</span>
+              <strong id="dashboard-total-balance">0.00000000</strong>
+              <p>Confirmed local wallet balance.</p>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Pending Deposits</span>
+              <strong id="dashboard-pending-deposits">0</strong>
+              <p>Incoming transactions waiting for confirmation.</p>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Pending Withdrawals</span>
+              <strong id="dashboard-pending-withdrawals">0</strong>
+              <p>Outgoing transactions waiting for confirmation.</p>
+            </article>
+            <article class="metric-card">
+              <span class="metric-label">Node Height</span>
+              <strong id="dashboard-node-height">0</strong>
+              <p id="dashboard-node-peers">Waiting for node.</p>
+            </article>
+          </section>
+
+          <div class="grid two home-setup-grid">
+            <article class="card" id="first-time-setup-card">
+              <h3>First-time setup</h3>
+              <p class="setup-required">You need to create a first-time setup wallet before the left wallet menu appears.</p>
+              <p>Create an encrypted local wallet. Back up the wallet folder before receiving large balances.</p>
+              <label for="create-password">New wallet password</label>
+              <input id="create-password" type="password" autocomplete="new-password" placeholder="Minimum 10 characters">
+              <button id="create-wallet" class="primary-button" type="button">Create Encrypted Wallet</button>
+              <button id="setup-restore-backup" type="button">Restore Existing Wallet Backup</button>
+            </article>
+            <article class="card">
+              <h3>Wallet status</h3>
+              <div class="table-like">
+                <div class="table-row"><span>Coin</span><strong>HobbyHash Coin</strong></div>
+                <div class="table-row"><span>Ticker</span><strong>HOBC</strong></div>
+                <div class="table-row"><span>Mainnet P2P</span><strong>18761</strong></div>
+                <div class="table-row"><span>Local RPC</span><strong>127.0.0.1:18762 private only</strong></div>
+                <div class="table-row"><span>Mainnet status</span><strong>Ready - genesis checkpoint valid</strong></div>
+              </div>
+            </article>
+            <article class="card" id="home-next-steps-card">
+              <h3>Recommended next steps</h3>
+              <div class="next-steps">
+                <div><span>1</span><strong>Create a receive wallet</strong><p>Name your first receive address so deposits are easy to track.</p></div>
+                <div><span>2</span><strong>Save a backup</strong><p>Back up the encrypted wallet file before holding a large balance.</p></div>
+                <div><span>3</span><strong>Add app protection</strong><p>Use the Security page to require an authenticator code for sensitive actions.</p></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="hero-card">
+            <p class="eyebrow">Turnkey Full Node</p>
+            <h2>HobbyHash Wallet</h2>
+            <p>
+              A simple Windows wallet that runs its own local HobbyHash node, syncs over the HOBC peer-to-peer network,
+              and keeps RPC private on this computer. No public RPC service, no web backend, and no hosted wallet account.
+            </p>
+            <div class="feature-grid">
+              <div><strong>Local full node</strong><span>Starts automatically and validates the chain on your computer.</span></div>
+              <div><strong>Encrypted wallet</strong><span>Your wallet password protects spending from the local wallet file.</span></div>
+              <div><strong>Receive wallets</strong><span>Name receive addresses for mining, savings, deposits, or personal use.</span></div>
+              <div><strong>Optional app code</strong><span>Add an authenticator app code for sensitive wallet actions.</span></div>
+            </div>
+            <div class="callout warning">
+              Public P2P: <strong>hobbyhashcoin.com:18761</strong>. RPC stays private on <strong>127.0.0.1:18762</strong>.
+              This app never connects users to public RPC.
+            </div>
+          </div>
+
+          <article class="card" id="primary-receive-card">
+            <h3>Primary Receive Wallet</h3>
+            <p id="primary-receive-label">No receive wallet has been created yet.</p>
+            <p id="primary-receive-address" class="address-full empty">Create an encrypted wallet, then create a receive address.</p>
+            <div class="actions compact-actions">
+              <button id="home-new-address" class="primary-button" type="button">Create Receive Wallet</button>
+              <button id="home-copy-address" type="button">Copy Address</button>
+              <button id="home-open-address" type="button">View in Explorer</button>
+            </div>
+          </article>
+
+          <article class="card" id="recent-transactions-card">
+            <h3>Recent transactions</h3>
+            <div id="transactions" class="transaction-list">No wallet loaded yet.</div>
+          </article>
+        </section>
+
+        <section id="view-receive" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Receive</p>
+            <h2>Receive HOBC</h2>
+          </div>
+          <article class="card">
+            <p><b>Total Wallet Balance:</b> <span id="receive-total-balance">0.00000000</span> HOBC</p>
+            <p>Receive wallets are labels for organizing incoming payments. They do not have separate spendable balances.</p>
+            <label for="receive-label">New Receive Wallet Name</label>
+            <input id="receive-label" maxlength="80" placeholder="Mining, Savings, Exchange deposits">
+            <button id="new-address" class="primary-button" type="button">Create Receive Wallet</button>
+            <code id="receive-address" class="code-box">No address yet.</code>
+            <button id="copy-address" type="button">Copy Address</button>
+          </article>
+          <article class="card">
+            <h3>Your Receive Wallets</h3>
+            <div class="table-scroll">
+              <table class="wallet-table">
+                <thead><tr><th>Name</th><th>Address</th><th>Total Received</th><th>Pending</th><th>Deposits</th><th>Actions</th></tr></thead>
+                <tbody id="receive-address-list"><tr><td colspan="6">No receive wallets yet.</td></tr></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <section id="view-send" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Send</p>
+            <h2>Send HOBC from your local wallet</h2>
+          </div>
+          <article class="card">
+            <label for="send-address">Recipient address</label>
+            <input id="send-address" autocomplete="off">
+            <label for="send-amount">Amount HOBC</label>
+            <input id="send-amount" inputmode="decimal" autocomplete="off">
+            <label for="send-password">Wallet password</label>
+            <input id="send-password" type="password" autocomplete="current-password">
+            <div id="send-auth-group" hidden>
+              <label for="send-auth-code">Authenticator code</label>
+              <input id="send-auth-code" inputmode="numeric" autocomplete="one-time-code" placeholder="6-digit code">
+            </div>
+            <button id="send-hobc" class="primary-button" type="button">Send HOBC</button>
+            <pre id="send-result" class="code-box">No send yet.</pre>
+          </article>
+        </section>
+
+        <section id="view-security" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Security</p>
+            <h2>Authenticator App</h2>
+          </div>
+          <article class="card">
+            <p>Optional authenticator protection asks for a 6-digit app code before sensitive actions like sending HOBC, saving backups, restoring backups, or turning this feature off.</p>
+            <div class="callout warning">
+              This adds an extra local app check, but it does not replace your encrypted wallet password. Keep your wallet password and backups safe.
+            </div>
+            <div class="table-like">
+              <div class="table-row"><span>Status</span><strong id="auth-status">Not enabled</strong></div>
+            </div>
+            <button id="auth-start-setup" class="primary-button" type="button">Set Up Authenticator App</button>
+            <div id="auth-setup-panel" class="auth-panel" hidden>
+              <p>Open your authenticator app and add a new account manually. Use issuer <strong>HobbyHash Coin</strong>, account <strong>HobbyHash Wallet</strong>, and this secret:</p>
+              <code id="auth-secret" class="code-box">No secret generated.</code>
+              <button id="auth-copy-secret" type="button">Copy Secret</button>
+              <label for="auth-verify-code">Enter current 6-digit code</label>
+              <input id="auth-verify-code" inputmode="numeric" autocomplete="one-time-code" placeholder="123456">
+              <button id="auth-enable" class="primary-button" type="button">Enable Authenticator Protection</button>
+            </div>
+            <div id="auth-disable-panel" class="auth-panel" hidden>
+              <label for="auth-disable-code">Current authenticator code</label>
+              <input id="auth-disable-code" inputmode="numeric" autocomplete="one-time-code" placeholder="123456">
+              <button id="auth-disable" type="button">Disable Authenticator Protection</button>
+            </div>
+          </article>
+        </section>
+
+        <section id="view-transactions" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Transactions</p>
+            <h2>Transactions</h2>
+          </div>
+          <article class="card">
+            <p>Deposits show the receive wallet/address they came through. Withdrawals show the destination address.</p>
+            <label for="transaction-search">Search Transactions</label>
+            <input id="transaction-search" autocomplete="off" placeholder="Search txid, address, type, status, or amount">
+            <div class="table-scroll">
+              <table class="wallet-table">
+                <thead><tr><th>Type</th><th>Amount</th><th>Status</th><th>Wallet / Address</th><th>TXID</th><th>Confs</th><th>When</th><th>Details</th></tr></thead>
+                <tbody id="transaction-table-body"><tr><td colspan="8">No transactions found yet.</td></tr></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <section id="view-backup" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Backup</p>
+            <h2>Back up your wallet</h2>
+          </div>
+          <article class="card">
+            <p>Your funds are controlled by the encrypted local wallet data on this computer. Back it up somewhere safe and offline.</p>
+            <div id="backup-auth-group" hidden>
+              <label for="backup-auth-code">Authenticator code</label>
+              <input id="backup-auth-code" inputmode="numeric" autocomplete="one-time-code" placeholder="6-digit code">
+            </div>
+            <div class="backup-actions">
+              <button id="save-backup" class="primary-button" type="button">Save Wallet Backup</button>
+              <button id="restore-backup" type="button">Restore Wallet Backup</button>
+              <button id="open-backup" type="button">Open Wallet Data Folder</button>
+            </div>
+            <div class="callout danger">
+              Never share wallet files, wallet passwords, private keys, or recovery material. HobbyHash Coin cannot recover a lost wallet password.
+            </div>
+          </article>
+        </section>
+
+        <section id="view-advanced" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Advanced</p>
+            <h2>Node details</h2>
+          </div>
+          <div class="grid two">
+            <article class="card">
+              <h3>Local paths</h3>
+              <div id="paths" class="table-like"></div>
+              <h3>Peers</h3>
+              <div id="peer-summary" class="transaction-list">Peer details appear after the node starts.</div>
+              <button id="refresh-status" type="button">Refresh Status</button>
+              <button id="stop-node" type="button">Stop Node</button>
+            </article>
+            <article class="card">
+              <h3>Node log</h3>
+              <pre id="node-log" class="log-box">No node output yet.</pre>
+            </article>
+          </div>
+        </section>
+
+        <div class="modal-backdrop" id="receive-transactions-modal" aria-hidden="true">
+          <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="receive-transactions-title">
+            <div class="modal-header">
+              <div>
+                <span class="eyebrow">Receive Wallet</span>
+                <h3 id="receive-transactions-title">Wallet Transactions</h3>
+              </div>
+              <button type="button" class="small-button modal-close" data-close-modal>Close</button>
+            </div>
+            <div id="receive-transactions-detail" class="detail-grid"></div>
+            <div class="table-scroll">
+              <table class="wallet-table">
+                <thead><tr><th>TXID</th><th>Amount</th><th>Confs</th><th>Status</th><th>When</th><th>Explorer</th></tr></thead>
+                <tbody id="receive-transactions-body"><tr><td colspan="6">No transactions.</td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-backdrop" id="transaction-modal" aria-hidden="true">
+          <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="transaction-modal-title">
+            <div class="modal-header">
+              <div>
+                <span class="eyebrow">Wallet transaction</span>
+                <h3 id="transaction-modal-title">Transaction Details</h3>
+              </div>
+              <button type="button" class="small-button modal-close" data-close-modal>Close</button>
+            </div>
+            <div id="transaction-detail-grid" class="detail-grid"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>

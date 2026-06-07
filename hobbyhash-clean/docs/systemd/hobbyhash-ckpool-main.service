@@ -1,0 +1,16 @@
+[Unit]
+Description=HobbyHash ckpool main (HOBC solo)
+After=network-online.target hobbyhashd-mainnet.service
+Wants=network-online.target hobbyhashd-mainnet.service
+
+[Service]
+Type=simple
+User=hobbyhashcoin
+Group=hobbyhashcoin
+WorkingDirectory=/home/hobbyhashcoin/hobbyhash-clean/pool-main/ckpool/src
+ExecStart=/home/hobbyhashcoin/hobbyhash-clean/pool-main/ckpool/src/ckpool -A -n hobbyhash-ckpool-main -c /home/hobbyhashcoin/hobbyhash-conf/hobbyhash-ckpool-main.conf -s /home/hobbyhashcoin/hobbyhash-run/ckpool-main/sockdir -L
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

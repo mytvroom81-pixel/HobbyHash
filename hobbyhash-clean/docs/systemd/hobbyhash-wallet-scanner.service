@@ -1,0 +1,18 @@
+[Unit]
+Description=HOBC wallet deposit and confirmation scanner
+After=network-online.target hobbyhashd-mainnet.service hobbyhash-wallet.service
+Wants=network-online.target hobbyhashd-mainnet.service hobbyhash-wallet.service
+
+[Service]
+Type=simple
+User=hobbyhashcoin
+Group=hobbyhashcoin
+WorkingDirectory=/home/hobbyhashcoin/public_html/jobs
+ExecStart=/usr/bin/bash -lc 'while true; do /usr/bin/php /home/hobbyhashcoin/public_html/jobs/deposit_scanner.php --max-blocks=100; /usr/bin/php /home/hobbyhashcoin/public_html/jobs/confirmation_updater.php; sleep 30; done'
+Restart=on-failure
+RestartSec=10
+PrivateTmp=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

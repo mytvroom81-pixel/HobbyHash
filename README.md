@@ -1,93 +1,69 @@
-# HobbyHash Coin — Web Portal
+# HobbyHash Coin — Linux Node & Wallet Source
 
-Public website, wallet UI, admin panel, APIs, i18n, and the social bot service for [hobbyhashcoin.com](https://hobbyhashcoin.com).
+Source for the HOBC chain node, desktop/cold/watch wallets, web wallet backend, mining pools, and related Linux tooling.
 
-This repository contains **application source only**. Server secrets, chain data, pool binaries, and wallet private config stay on the host and are **not** tracked here.
+**Not included:** the public website (`public_html/`), social bot, live configs, or build artifacts. Those stay on the server.
 
-## What's included
+## Repository layout
 
 | Path | Purpose |
 |------|---------|
-| `public_html/app/` | PHP backend logic (wallet, admin, i18n, analytics) |
-| `public_html/api/` | Public JSON APIs |
-| `public_html/jobs/` | CLI maintenance and i18n jobs |
-| `public_html/includes/` | Shared layout partials |
-| `public_html/lang/` | Translation catalogs |
-| `public_html/assets/` | CSS, JS, images |
-| `social-bot/` | Node.js social posting service (Discord / X / Facebook) |
-| `docs/` | Deployment templates (no live secrets) |
+| `hobbyhash-clean/src/` | HOBC full node (`hobbyhashd`, CLI, wallet tools) — C++ source |
+| `hobbyhash-clean/wallet/` | Custodial web wallet backend (PHP app + jobs + schema) |
+| `hobbyhash-clean/apps/` | Desktop, cold, and watch wallet apps (Electron/Node) |
+| `hobbyhash-clean/pool-main/` | Main pool (`ckpool`) |
+| `hobbyhash-clean/pool-nano/` | Nano pool (`ckpool`) |
+| `hobbyhash-clean/scripts/` | Payout daemon, pool stats, audit scripts |
+| `hobbyhash-clean/packages/` | Chain package metadata |
+| `hobbyhash-clean/docs/` | Chain specs, genesis proofs, systemd unit files |
 
-## What's excluded (stays on server)
-
-- **HTML portal pages** — `index.php`, docs, mining, pool, wallet UI, admin UI, etc.
-- `public_html/.env` — Google Translate keys, wallet config path
-- `hobbyhash-wallet-private/config.php` — DB, RPC, Twilio, salts
-- `social-bot/.env` and `social-bot/data/` — bot tokens, SQLite DB
-- `vendor/`, `node_modules/` — install with Composer / npm
-- `downloads/` binaries, logs, caches, SQL dumps
-
-See each directory's `.gitignore` and the root `.gitignore`.
-
-## Server setup (summary)
-
-### 1. PHP site (`public_html/`)
+## Build the Linux node
 
 ```bash
-cd public_html
-composer install --no-dev
-cp .env.example .env
-# Edit .env locally — never commit it
+cd hobbyhash-clean/src
+./autogen.sh
+./configure --without-gui
+make -j"$(nproc)"
 ```
 
-Create wallet config from the template:
+Binaries land under `src/` (e.g. `src/hobbyhashd`, `src/hobbyhash-cli` after rebrand build).
+
+See `hobbyhash-clean/docs/` for mainnet boot, genesis, and systemd examples.
+
+## Web wallet backend
 
 ```bash
-mkdir -p ~/hobbyhash-wallet-private
-cp docs/wallet-config.example.php ~/hobbyhash-wallet-private/config.php
-chmod 600 ~/hobbyhash-wallet-private/config.php
-# Edit config.php with real DB/RPC/SMS values
+cd hobbyhash-clean/wallet
+cp config.example.php /path/to/private/config.php
+chmod 600 /path/to/private/config.php
+# Edit DB + RPC credentials, then apply install.sql / migrations
 ```
 
-Set `HOBC_WALLET_CONFIG` in `public_html/.env` to that private path.
+Full steps: `hobbyhash-clean/wallet/README_WALLET_INSTALL.md`
 
-### 2. Social bot (`social-bot/`)
+## Desktop wallets
 
 ```bash
-cd social-bot
+cd hobbyhash-clean/apps/hobbyhash-wallet-desktop
 npm install
-cp .env.example .env
-# Edit .env — platform keys; internal token goes in data/internal-token
-npm run migrate
-npm run seed
+npm run build   # or npm start for dev
 ```
 
-See `social-bot/README.md` for systemd and admin integration.
-
-### 3. Before pushing to GitHub
+## Before pushing to GitHub
 
 ```bash
 ./scripts/check-secrets.sh
 git status
 ```
 
-Do **not** push if the check reports possible secrets.
+Do **not** push if the secret scan fails.
 
-## i18n
+## Security
 
-English catalogs live under `public_html/lang/en/`. After adding keys:
-
-```bash
-cd public_html
-php jobs/i18n_translate.php translate:check
-```
-
-## Security notes
-
-- Never commit `.env`, `config.php`, API keys, RPC cookies, or Twilio credentials.
-- Keep wallet config **outside** `public_html/` with mode `600`.
-- The social bot runs with `DRY_RUN=1` by default until you explicitly go live.
-- Rotate any credential that was ever stored in a tracked file.
+- Never commit `config.php`, `.env`, RPC cookies, DB passwords, or API keys.
+- `config.example.php` uses placeholders only — copy it to a private path on the server.
+- Rotate any credential that was ever stored in an example or tracked file.
 
 ## License
 
-Proprietary — HobbyHash Coin project infrastructure.
+See `hobbyhash-clean/src/COPYING` (chain node) and project docs for component licenses.

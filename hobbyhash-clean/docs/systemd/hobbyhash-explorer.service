@@ -1,0 +1,18 @@
+[Unit]
+Description=HobbyHash Coin local explorer app
+After=network-online.target hobbyhashd-mainnet.service
+Wants=network-online.target hobbyhashd-mainnet.service
+
+[Service]
+Type=simple
+User=hobbyhashcoin
+Group=hobbyhashcoin
+WorkingDirectory=/home/hobbyhashcoin/hobbyhash-clean/explorer
+ExecStart=/usr/bin/php -S 127.0.0.1:18765 /home/hobbyhashcoin/hobbyhash-clean/explorer/app.php
+Restart=on-failure
+RestartSec=5
+PrivateTmp=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

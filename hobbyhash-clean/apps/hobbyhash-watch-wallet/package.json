@@ -1,0 +1,63 @@
+{
+  "name": "hobbyhash-watch-wallet",
+  "version": "0.1.0-beta",
+  "description": "Watch-only and broadcast wallet for HobbyHash Coin (HOBC) using the user's own local/private node RPC.",
+  "productName": "HobbyHash Watch Wallet",
+  "main": "src/main.js",
+  "author": "HobbyHash Coin",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win portable nsis --x64",
+    "dist:portable": "electron-builder --win portable --x64"
+  },
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.hobbyhashcoin.watchwallet",
+    "productName": "HobbyHash Watch Wallet",
+    "copyright": "Copyright 2026 HobbyHash Coin",
+    "directories": {
+      "output": "dist/windows"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "asar": true,
+    "win": {
+      "signAndEditExecutable": false,
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "HobbyHash-Watch-Wallet-${target}.${ext}"
+    },
+    "portable": {
+      "artifactName": "HobbyHash-Watch-Wallet-Portable.exe"
+    },
+    "nsis": {
+      "artifactName": "HobbyHash-Watch-Wallet-Setup.exe",
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "HobbyHash Watch Wallet"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+[Unit]
+Description=HobbyHash mainnet node2
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=forking
+User=hobbyhashcoin
+Group=hobbyhashcoin
+ExecStart=/home/hobbyhashcoin/bin/hobbyhashd -conf=/home/hobbyhashcoin/hobbyhash-conf/hobbyhash-mainnet-node2.conf -daemonwait
+ExecStop=/home/hobbyhashcoin/bin/hobbyhash-cli -conf=/home/hobbyhashcoin/hobbyhash-conf/hobbyhash-mainnet-node2.conf stop
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

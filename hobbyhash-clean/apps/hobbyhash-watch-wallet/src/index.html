@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HobbyHash Watch Wallet</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="coin-mark" aria-hidden="true">H</div>
+        <p class="eyebrow">HobbyHash Coin</p>
+        <h1>HobbyHash Watch Wallet</h1>
+        <p class="ticker">HOBC · Watch-only / broadcast wallet · Est. 2026</p>
+        <nav class="nav-tabs" aria-label="Wallet screens">
+          <button class="nav-tab is-active" data-view="network">Network</button>
+          <button class="nav-tab" data-view="watch">Watch-Only</button>
+          <button class="nav-tab" data-view="broadcast">Broadcast</button>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <section class="status-strip">
+          <div><span>Default RPC host</span><strong>127.0.0.1</strong></div>
+          <div><span>Default RPC port</span><strong>18762</strong></div>
+          <div><span>Public P2P node</span><strong>hobbyhashcoin.com:18761</strong></div>
+        </section>
+        <div id="app-alert" class="alert" hidden></div>
+
+        <section id="view-network" class="view is-active">
+          <div class="hero-card">
+            <p class="eyebrow">Private RPC Only</p>
+            <h2>Watch-only wallet for your own HOBC node</h2>
+            <p>
+              This app never asks for seed phrases or private keys. It imports watch-only files from the cold wallet and uses
+              RPC only for the user's own local/private HobbyHash Coin node.
+            </p>
+            <div class="callout danger">
+              <strong>Warning:</strong>
+              RPC is for your own local node only. Do not connect to public RPC. Never expose port 18762 to the public internet.
+            </div>
+            <div class="callout warning">
+              For public node discovery, use hobbyhashcoin.com:18761. RPC 18762 is local/private only.
+            </div>
+          </div>
+
+          <div class="grid two">
+            <article class="card">
+              <h3>Network screen</h3>
+              <div class="table-like">
+                <div class="table-row"><span>Default RPC host</span><strong>127.0.0.1</strong></div>
+                <div class="table-row"><span>Default RPC port</span><strong>18762</strong></div>
+                <div class="table-row"><span>Mainnet status</span><strong>Ready - checkpoint valid</strong></div>
+                <div class="table-row"><span>Genesis status</span><strong>Unique HOBC genesis</strong></div>
+                <div class="table-row"><span>Public P2P node</span><strong>hobbyhashcoin.com:18761</strong></div>
+                <div class="table-row"><span>Mainnet P2P</span><strong>18761</strong></div>
+                <div class="table-row"><span>RPC access</span><strong>Private/local only</strong></div>
+              </div>
+            </article>
+
+            <article class="card">
+              <h3>Advanced RPC settings</h3>
+              <label for="rpc-host">RPC host</label>
+              <input id="rpc-host" value="127.0.0.1" autocomplete="off">
+              <label for="rpc-port">RPC port</label>
+              <input id="rpc-port" value="18762" inputmode="numeric" autocomplete="off">
+              <label for="rpc-user">RPC username</label>
+              <input id="rpc-user" autocomplete="off">
+              <label for="rpc-pass">RPC password</label>
+              <input id="rpc-pass" type="password" autocomplete="off">
+              <button id="test-rpc" class="primary-button" type="button">Test Local RPC</button>
+            </article>
+          </div>
+        </section>
+
+        <section id="view-watch" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Watch-Only Import</p>
+            <h2>Import public address file from cold wallet</h2>
+            <p class="muted">No seed phrase input. No private key input. This screen accepts only the watch-only JSON export.</p>
+          </div>
+          <div class="grid two">
+            <article class="card">
+              <label for="watch-file">Watch-only JSON file</label>
+              <input id="watch-file" type="file" accept=".json">
+              <textarea id="watch-json" rows="10" spellcheck="false" placeholder="Paste watch-only JSON here."></textarea>
+              <button id="import-watch" class="primary-button" type="button">Import Watch-Only File</button>
+            </article>
+            <article class="card">
+              <h3>Imported addresses</h3>
+              <div id="address-list" class="address-list">No watch-only file imported yet.</div>
+            </article>
+          </div>
+        </section>
+
+        <section id="view-broadcast" class="view">
+          <div class="section-heading">
+            <p class="eyebrow">Broadcast</p>
+            <h2>Broadcast a signed transaction through your local node</h2>
+            <p class="muted">Paste signed transaction hex exported from the cold wallet. This app does not sign transactions.</p>
+          </div>
+          <div class="grid two">
+            <article class="card">
+              <label for="signed-hex">Signed transaction hex</label>
+              <textarea id="signed-hex" rows="10" spellcheck="false"></textarea>
+              <button id="broadcast-tx" class="primary-button" type="button">Broadcast Through Local Node</button>
+            </article>
+            <article class="card">
+              <h3>Broadcast result</h3>
+              <pre id="broadcast-result" class="code-box">No broadcast yet.</pre>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./renderer.js"></script>
+  </body>
+</html>

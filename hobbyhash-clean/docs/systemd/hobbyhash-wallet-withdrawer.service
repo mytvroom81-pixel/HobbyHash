@@ -1,0 +1,18 @@
+[Unit]
+Description=HOBC wallet withdrawal broadcaster
+After=network-online.target hobbyhashd-mainnet.service hobbyhash-wallet.service
+Wants=network-online.target hobbyhashd-mainnet.service hobbyhash-wallet.service
+
+[Service]
+Type=simple
+User=hobbyhashcoin
+Group=hobbyhashcoin
+WorkingDirectory=/home/hobbyhashcoin/public_html/jobs
+ExecStart=/usr/bin/bash -lc 'while true; do /usr/bin/php /home/hobbyhashcoin/public_html/jobs/withdrawal_broadcaster.php; sleep 30; done'
+Restart=on-failure
+RestartSec=10
+PrivateTmp=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
