@@ -95,6 +95,7 @@ mkdir -p "$BUILD_SRC_DIR" "$PACKAGE_DIR"
 tar \
   --exclude="./build-al9-x86_64" \
   --exclude="./build-al9-container-x86_64" \
+  --exclude="./build-mingw-x86_64" \
   --exclude="./release-al9-x86_64" \
   --exclude="./release-al9-container-x86_64" \
   --exclude="./dist" \
@@ -104,14 +105,15 @@ tar \
   -cf - . | tar -C "$BUILD_SRC_DIR" -xf -
 
 find "$BUILD_SRC_DIR" \( -name ".deps" -o -name ".libs" -o -name "autom4te.cache" \) -type d -prune -exec rm -rf {} +
-find "$BUILD_SRC_DIR" -type f \( -name "*.o" -o -name "*.lo" -o -name "*.la" -o -name "*.a" \) -delete
-find "$BUILD_SRC_DIR" -type f -name Makefile -delete
+find "$BUILD_SRC_DIR" -type f \( -name "*.o" -o -name "*.lo" -o -name "*.la" \) -delete
 
 rm -f \
   "$BUILD_SRC_DIR/config.log" \
   "$BUILD_SRC_DIR/config.status" \
   "$BUILD_SRC_DIR/libbitcoinconsensus.pc" \
   "$BUILD_SRC_DIR/libtool" \
+  "$BUILD_SRC_DIR/Makefile" \
+  "$BUILD_SRC_DIR/src/Makefile" \
   "$BUILD_SRC_DIR/src/config/bitcoin-config.h" \
   "$BUILD_SRC_DIR/src/config/stamp-h1"
 

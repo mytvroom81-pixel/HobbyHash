@@ -30,17 +30,39 @@ static int64_t DifficultyAdjustmentIntervalAtHeight(const Consensus::Params& par
     return PowTargetTimespanAtHeight(params, height) / params.nPowTargetSpacing;
 }
 
-static unsigned int CalculateNextWorkRequiredForTimespan(const CBlockIndex* pindexLast, int64_t nFirstBlockTime, const Consensus::Params& params, int64_t nTargetTimespan)
+static void PowAdjustmentTimespanBounds(const Consensus::Params& params, int64_t height, int64_t nTargetTimespan, int64_t& smallest_timespan, int64_t& largest_timespan)
+{
+    int64_t factor_num = 4;
+    int64_t factor_den = 1;
+    if (params.nPowRetargetV3ActivationHeight > 0 &&
+        height >= params.nPowRetargetV3ActivationHeight &&
+        params.nPowRetargetV2ActivationHeight > 0 &&
+        height >= params.nPowRetargetV2ActivationHeight &&
+        params.nPowRetargetV2Timespan > 0 &&
+        nTargetTimespan == params.nPowRetargetV2Timespan &&
+        params.nPowRetargetV3MaxFactorNum > 0 &&
+        params.nPowRetargetV3MaxFactorDen > 0) {
+        factor_num = params.nPowRetargetV3MaxFactorNum;
+        factor_den = params.nPowRetargetV3MaxFactorDen;
+    }
+    smallest_timespan = nTargetTimespan * factor_den / factor_num;
+    largest_timespan = nTargetTimespan * factor_num / factor_den;
+}
+
+static unsigned int CalculateNextWorkRequiredForTimespan(const CBlockIndex* pindexLast, int64_t nFirstBlockTime, const Consensus::Params& params, int64_t nTargetTimespan, int64_t height)
 {
     if (params.fPowNoRetargeting)
         return pindexLast->nBits;
 
     // Limit adjustment step
+    int64_t smallest_timespan = 0;
+    int64_t largest_timespan = 0;
+    PowAdjustmentTimespanBounds(params, height, nTargetTimespan, smallest_timespan, largest_timespan);
     int64_t nActualTimespan = pindexLast->GetBlockTime() - nFirstBlockTime;
-    if (nActualTimespan < nTargetTimespan/4)
-        nActualTimespan = nTargetTimespan/4;
-    if (nActualTimespan > nTargetTimespan*4)
-        nActualTimespan = nTargetTimespan*4;
+    if (nActualTimespan < smallest_timespan)
+        nActualTimespan = smallest_timespan;
+    if (nActualTimespan > largest_timespan)
+        nActualTimespan = largest_timespan;
 
     // Retarget
     const arith_uint256 bnPowLimit = UintToArith256(params.powLimit);
@@ -95,12 +117,12 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     const CBlockIndex* pindexFirst = pindexLast->GetAncestor(nHeightFirst);
     assert(pindexFirst);
 
-    return CalculateNextWorkRequiredForTimespan(pindexLast, pindexFirst->GetBlockTime(), params, nTargetTimespan);
+    return CalculateNextWorkRequiredForTimespan(pindexLast, pindexFirst->GetBlockTime(), params, nTargetTimespan, nHeightNext);
 }
 
 unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nFirstBlockTime, const Consensus::Params& params)
 {
-    return CalculateNextWorkRequiredForTimespan(pindexLast, nFirstBlockTime, params, params.nPowTargetTimespan);
+    return CalculateNextWorkRequiredForTimespan(pindexLast, nFirstBlockTime, params, params.nPowTargetTimespan, pindexLast->nHeight + 1);
 }
 
 // Check that on difficulty adjustments, the new difficulty does not increase
@@ -113,8 +135,9 @@ bool PermittedDifficultyTransition(const Consensus::Params& params, int64_t heig
     const int64_t nDifficultyAdjustmentInterval = DifficultyAdjustmentIntervalAtHeight(params, height);
 
     if (height % nDifficultyAdjustmentInterval == 0) {
-        int64_t smallest_timespan = nTargetTimespan/4;
-        int64_t largest_timespan = nTargetTimespan*4;
+        int64_t smallest_timespan = 0;
+        int64_t largest_timespan = 0;
+        PowAdjustmentTimespanBounds(params, height, nTargetTimespan, smallest_timespan, largest_timespan);
 
         const arith_uint256 pow_limit = UintToArith256(params.powLimit);
         arith_uint256 observed_new_target;

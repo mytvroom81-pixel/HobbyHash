@@ -93,6 +93,9 @@ public:
         consensus.nPowRetargetTimespan = 100 * consensus.nPowTargetSpacing; // 100 blocks
         consensus.nPowRetargetV2ActivationHeight = 800;
         consensus.nPowRetargetV2Timespan = consensus.nPowTargetSpacing; // 1 block
+        consensus.nPowRetargetV3ActivationHeight = 1900;
+        consensus.nPowRetargetV3MaxFactorNum = 5;
+        consensus.nPowRetargetV3MaxFactorDen = 4; // 1.25x max step per block at/after V3 activation
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1815; // 90% of 2016

@@ -12,6 +12,7 @@ RUN set -eux; \
       libtool \
       pkgconf \
       python3 \
+      diffutils \
       which \
       tar \
       gzip \

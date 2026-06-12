@@ -115,6 +115,9 @@ struct Params {
     int64_t nPowRetargetTimespan{0};
     int nPowRetargetV2ActivationHeight{0};
     int64_t nPowRetargetV2Timespan{0};
+    int nPowRetargetV3ActivationHeight{0};
+    int64_t nPowRetargetV3MaxFactorNum{0};
+    int64_t nPowRetargetV3MaxFactorDen{0};
     std::chrono::seconds PowTargetSpacing() const
     {
         return std::chrono::seconds{nPowTargetSpacing};

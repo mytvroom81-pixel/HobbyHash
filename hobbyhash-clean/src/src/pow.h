@@ -25,9 +25,10 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&
  * given height is not possible, given the proof-of-work on the prior block as
  * specified by old_nbits.
  *
- * This function only checks that the new value is within a factor of 4 of the
- * old value for blocks at the difficulty adjustment interval, and otherwise
- * requires the values to be the same.
+ * This function only checks that the new value is within the permitted per-block
+ * adjustment factor (4x before V3 activation, then the configured V3 factor)
+ * for blocks at the difficulty adjustment interval, and otherwise requires the
+ * values to be the same.
  *
  * Always returns true on networks where min difficulty blocks are allowed,
  * such as regtest/testnet.

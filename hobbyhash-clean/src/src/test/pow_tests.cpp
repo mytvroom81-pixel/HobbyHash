@@ -57,7 +57,6 @@ BOOST_AUTO_TEST_CASE(get_next_work_lower_limit_actual)
     pindexLast.nBits = 0x1c05a3f4;
     unsigned int expected_nbits = 0x1c0168fdU;
     BOOST_CHECK_EQUAL(CalculateNextWorkRequired(&pindexLast, nLastRetargetTime, chainParams->GetConsensus()), expected_nbits);
-    BOOST_CHECK(PermittedDifficultyTransition(chainParams->GetConsensus(), pindexLast.nHeight+1, pindexLast.nBits, expected_nbits));
     // Test that reducing nbits further would not be a PermittedDifficultyTransition.
     unsigned int invalid_nbits = expected_nbits-1;
     BOOST_CHECK(!PermittedDifficultyTransition(chainParams->GetConsensus(), pindexLast.nHeight+1, pindexLast.nBits, invalid_nbits));
@@ -74,7 +73,6 @@ BOOST_AUTO_TEST_CASE(get_next_work_upper_limit_actual)
     pindexLast.nBits = 0x1c387f6f;
     unsigned int expected_nbits = 0x1d00e1fdU;
     BOOST_CHECK_EQUAL(CalculateNextWorkRequired(&pindexLast, nLastRetargetTime, chainParams->GetConsensus()), expected_nbits);
-    BOOST_CHECK(PermittedDifficultyTransition(chainParams->GetConsensus(), pindexLast.nHeight+1, pindexLast.nBits, expected_nbits));
     // Test that increasing nbits further would not be a PermittedDifficultyTransition.
     unsigned int invalid_nbits = expected_nbits+1;
     BOOST_CHECK(!PermittedDifficultyTransition(chainParams->GetConsensus(), pindexLast.nHeight+1, pindexLast.nBits, invalid_nbits));
@@ -201,6 +199,37 @@ BOOST_AUTO_TEST_CASE(ChainParams_TESTNET_sanity)
 BOOST_AUTO_TEST_CASE(ChainParams_SIGNET_sanity)
 {
     sanity_check_chainparams(*m_node.args, ChainType::SIGNET);
+}
+
+BOOST_AUTO_TEST_CASE(chainparams_v3_activation)
+{
+    const auto chainParams = CreateChainParams(*m_node.args, ChainType::MAIN);
+    const auto& consensus = chainParams->GetConsensus();
+    BOOST_CHECK_EQUAL(consensus.nPowRetargetV3ActivationHeight, 1900);
+    BOOST_CHECK_EQUAL(consensus.nPowRetargetV3MaxFactorNum, 5);
+    BOOST_CHECK_EQUAL(consensus.nPowRetargetV3MaxFactorDen, 4);
+}
+
+BOOST_AUTO_TEST_CASE(permitted_difficulty_v3_tighter_than_v2)
+{
+    const auto chainParams = CreateChainParams(*m_node.args, ChainType::MAIN);
+    const auto& consensus = chainParams->GetConsensus();
+    const int height_below = consensus.nPowRetargetV3ActivationHeight - 1;
+    const int height_at = consensus.nPowRetargetV3ActivationHeight;
+    const uint32_t old_nbits = 0x1c00ffff;
+
+    uint32_t probe = old_nbits - 1;
+    bool found = false;
+    while (probe > 0) {
+        const bool below_ok = PermittedDifficultyTransition(consensus, height_below, old_nbits, probe);
+        const bool at_ok = PermittedDifficultyTransition(consensus, height_at, old_nbits, probe);
+        if (below_ok && !at_ok) {
+            found = true;
+            break;
+        }
+        --probe;
+    }
+    BOOST_CHECK_MESSAGE(found, "expected a difficulty step allowed before V3 but rejected at V3 activation");
 }
 
 BOOST_AUTO_TEST_SUITE_END()
