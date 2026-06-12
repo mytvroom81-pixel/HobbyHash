@@ -4,8 +4,6 @@
 /*
 !/.gitignore
 !/README.md
-!/scripts/
-!/scripts/**
 !/hobbyhash-clean/
 !/hobbyhash-clean/src/
 !/hobbyhash-clean/src/**
