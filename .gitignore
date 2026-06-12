@@ -49,3 +49,4 @@
 !**/build-aux/
 
 **/.git/
+**/.git.nested-backup/
